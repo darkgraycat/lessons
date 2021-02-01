@@ -25,29 +25,10 @@ a {
 a:hover { border-bottom: 2px solid #6f6 }
 a:active { color:#f66 }
 
-/*  */
-.border-top 	{ border-top: 2px solid #000; }
-.border-bottom 	{ border-bottom: 2px solid #000; }
-.border-left 	{ border-left: 2px solid #000; }
-.border-right 	{ border-right: 2px solid #000; }
-.border-top-bottom {
-	border-top: 2px solid #000;
-	border-bottom: 2px solid #000;
+h1 {
+	background-color: #222;
+	outline: 4px solid #222;
+	outline-offset: 4px;
+	color: #fff;
+	padding: 10px;
 }
-.border-left-right {
-	border-left: 2px solid #000;
-	border-right: 2px solid #000;
-}
-
-
-/*  */
-.color-a { color: #f66 }
-.color-b { color: #6f6 }
-.color-c { color: #66f }
-.color-d { color: #ff6 }
-.color-e { color: #6ff }
-.color-f { color: #f6f }
-.color-0 { color: #222 }
-.color-1 { color: #444 }
-.color-2 { color: #666 }
-
