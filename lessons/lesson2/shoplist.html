@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Список покупок</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<a href="index.html">Вернуться к оглавлению</a>
+
+	<form action="">
+		<fieldset>
+			<legend>Что будем покупать?</legend>
+			<ul class="shoplist">
+				<li><label><input type="checkbox" name="item_1" id="item_1">Мяско</label></li>
+				<li><label><input type="checkbox" name="item_2" id="item_2">Хлебушек</label></li>
+				<li><label><input type="checkbox" name="item_3" id="item_3">Молочко</label></li>
+				<li><label><input type="checkbox" name="item_4" id="item_4">Шоколадку</label></li>
+				<li><label><input type="checkbox" name="item_5" id="item_5">Яблочко</label></li>
+			</ul>
+			<div>
+				<label for="comment" class="small-text">Пожелания к покупке?</label>
+				<textarea name="comment" id="comment" rows="4"></textarea>
+				<input type="button" value="Купить" id="purchase">
+			</div>
+		</fieldset>
+	</form>
+
+	<script>
+		window.onload = () => {
+			const button = document.querySelector('#purchase')
+			button.onclick = () => {
+				alert('Заказ сделан!')
+			}
+		}
+	</script>
+
+</body>
+
+</html>

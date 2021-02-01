@@ -1,0 +1,76 @@
+body, html {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 200;
+}
+
+form {
+	display: flex;
+	margin-top: 20px;
+}
+
+.shoplist {
+	list-style: none;
+	margin-bottom: 20px;
+	padding: 0px;
+}
+
+textarea {
+	resize: none;
+	border: none;
+	outline: none;
+	background-color: #fff;
+	width: 100%;
+}
+
+legend {
+	font-weight: bold;
+	background-color: #f88;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+
+input[type="checkbox"] {
+	margin-right: 20px;
+}
+
+input[type="button"] {
+	background-color: #444;
+	border: 2px solid #888;
+	outline: none;
+	color: #fff;
+	width: 100%;
+	font-weight: bold;
+}
+
+input[type="button"]:hover {
+	background-color: #888;
+}
+
+input[type="button"]:active {
+	color: #f88;
+}
+
+.small-text {
+	font-size: smaller;
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+	color: #488;
+}
+
+a:hover {
+	color: #f88;
+}
+
+p {
+	margin: 20px;
+}
+
+section {
+	border-bottom: 2px solid #444;
+	margin-bottom: 10px;
+	padding: 20px;
+}
