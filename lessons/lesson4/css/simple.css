@@ -28,3 +28,8 @@ footer {
 	text-align: center;
 	padding: 4px;
 }
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
