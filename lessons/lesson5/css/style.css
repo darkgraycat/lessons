@@ -117,6 +117,11 @@ footer {
 	margin-top: 72px;
 }
 
+.copyright-block a {
+	text-decoration: none;
+	color: #00C9FC;
+}
+
 .logo-block {
 	margin-bottom: 36px;
 }
