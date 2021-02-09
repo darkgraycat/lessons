@@ -1,0 +1,59 @@
+@font-face { font-family: ProximaNova; src: url('ProximaNova-Regular.woff'); } 
+@font-face { font-family: ProximaNovaLight; src: url('ProximaNova-Light.woff'); } 
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px auto;
+	width: 220px;
+}
+
+section div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section svg {
+	width: 30px;
+	height: 30px;
+	padding: 16px;
+	fill: #ffffff;
+}
+
+section a {
+	background-color: #1275B9;
+	border: 1px solid #1275B9;
+	border-radius: 50%;
+}
+
+section svg:hover { fill: #2a69a6; }
+section svg:active { fill: #e6ac0c }
+section a:hover { background-color: #ffffff; }
+section a:active { background-color: #1275B9; }
+
+section h2 {
+	font-family: 'ProximaNova', Arial;
+	font-size: 14px;
+	text-align: center;
+}
+
+section p {
+	font-family: 'ProximaNovaLight', Verdana;
+	font-size: 14px;
+	text-align: center;
+}
+
+footer a {
+	font-family: 'ProximaNova', Arial;
+	font-size: 14px;
+	text-decoration: none;
+}
