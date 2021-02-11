@@ -1,0 +1,62 @@
+/* @font-face {
+	font-family: Weather;
+	src: url('https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/font/weathericons-regular-webfont.ttf');
+} */
+
+
+
+html, body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #FFFFFF;
+	min-height: 100%;
+	background-color: #3399CC;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	transition: all .1s ease-in;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+p {
+	margin: 20px auto;
+}
+
+ul {
+	list-style: none;
+}
+
+.grid {
+	font-size: 0px;
+	border: 2px solid white;
+	background-color: yellow;
+}
+
+.grid li {
+	display: inline-block;
+	box-sizing: border-box;
+	border: 2px solid white;
+	font-size: 18px;
+	text-align: center;
+}
+
+li:hover {
+	opacity: .6;
+}
+
+li:nth-child(1) {width: 50%; background-color: #3399CC;}
+li:nth-child(2) {width: 25%; background-color: #33CCCC;}
+li:nth-child(3) {width: 25%; background-color: #996699;}
+li:nth-child(4) {width: 25%; background-color: #C24747;}
+li:nth-child(5) {width: 25%; background-color: #E2674A;}
+li:nth-child(6) {width: 25%; background-color: #FFCC66;}
+li:nth-child(7) {width: 25%; background-color: #99CC99;}
+li:nth-child(8) {width: 25%; background-color: #669999;}
+li:nth-child(9) {width: 50%; background-color: #CC6699;}
+li:nth-child(10) {width: 25%; background-color: #339966;}
+li:nth-child(11) {width: 100%; background-color: #666699;}
