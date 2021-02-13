@@ -71,27 +71,21 @@ html, body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 200px;
+	margin-top: 50px;
 }
 
 .image img { position: relative; }
 
 .image > :nth-child(1) {	/* smoke */
-	width: 49px;
-	height: 46px;
 	bottom: 10px;
 	opacity: .5;
 }
 
 .image > :nth-child(2) {	/* cup */
-	width: 135px;
-	height: 77px;
 	left: 8px;
 }
 
 .image > :nth-child(3) {	/* bean */
-	width: 36px;
-	height: 45px;
 	bottom: 60px;
 	opacity: .1;
 }
