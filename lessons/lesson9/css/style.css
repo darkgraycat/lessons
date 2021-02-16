@@ -70,6 +70,7 @@ main a {
 	border: 2px solid #EAA258;
 	padding: 10px 30px;
 	margin: 5px;
+	transition: all .4s ease-in;
 }
 
 main a[href="editor.html"] {
@@ -80,7 +81,6 @@ main a[href="editor.html"] {
 main a:hover { color: #66f; border-color: #66f; background-color: #ddd;}
 
 nav {
-	transition: all .4s ease-in;
 	display: flex;
 	justify-content: flex-start;
 }
