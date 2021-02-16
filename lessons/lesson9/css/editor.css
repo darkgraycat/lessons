@@ -1,0 +1,145 @@
+@font-face { font-family: 'ProximaNova'; src: url('font/Proxima\ Nova\ Regular.otf') }
+@font-face { font-family: 'ProximaNova Bold'; src: url('font/Proxima\ Nova\ Bold.otf') }
+
+html, body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #464F54;
+}
+
+.text-block {
+	background-color: #FFFFFF;
+
+	padding: 5%;
+	margin: 2%;
+	max-width: 1000px;
+	padding-top: 150px;
+	margin-top: 150px;
+	height: 100vh;
+	position: relative;
+}
+
+.line {
+	position: absolute;
+	top: 0px;
+	left: 40px;
+	height: 100%;
+	border-left: 3px solid #E8EBEC;
+}
+
+.text-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0 5%;
+	max-width: 800px;
+}
+
+.text-block h3 {
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	color: #B4B4B4;
+}
+
+.text-block h1 {
+	font-family: 'ProximaNova Bold', sans-serif;
+	font-weight: bold;
+	font-size: 64px;
+	text-transform: uppercase;
+	color: #2A2A2A;
+}
+
+.text-block h2 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 400;
+	font-size: 22px;
+	font-style: italic;
+	color: #8F8F8F;
+}
+
+.text-block p {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 400;
+	font-size: 20px;
+	text-align: justify;
+	color: #000000;
+}
+
+h1, h2, h3 {
+	margin: 5px;
+}
+
+
+.editor-block {
+	position: fixed;
+	/* position: absolute; */
+	top: 45px;
+	right: 0px;
+}
+
+.title {
+	background-color: #181818;
+	width: 800px;
+	height: 150px;
+	font-family: 'ProximaNova', sans-serif;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color: #767676;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: flex-start;
+	text-align: left;
+	padding-left: 50px;
+}
+
+.title textarea {
+	outline: none;
+	resize: none;
+	width: 750px;
+	border: none;
+	border-bottom: 3px solid #303030;
+	background-color: #181818;
+	color: #FEFEFE;
+	letter-spacing: 2px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 36px;
+	content: '2112';
+}
+
+.format {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #FBC02D;
+	padding-left: 20px;
+	margin-left: 40px;
+}
+
+.format img {
+	padding: 15px;
+	margin: 5px;
+	width: 20px;
+	height: auto;
+	opacity: .6;
+}
+
+.format img:hover {
+	border-radius: 25%;
+	background-color: #FBC02D;
+	opacity: .9;
+	background-color: #ffd25f;
+}
+
+.format img:active {
+	width: 30px;
+	height: 30px;
+	margin: 0px;
+}

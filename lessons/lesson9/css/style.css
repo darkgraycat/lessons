@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Playfair+Display&display=swap');
+/* 
+
+“
+
+*/
+
+* {
+	/* border: 1px dotted red; */
+	transition: all .4s ease-in;
+}
+
+.container {
+	/* width: 100%; */
+	/* height: auto; */
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 3%;
+	color: #171717;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	box-shadow: 0px 4px 32px rgba(0,0,0,.1);
+	max-width: 1400px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	padding: 3%;
+}
+
+main h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 42px;
+}
+
+main article {
+	font-size: 18px;
+	line-height: 2rem;
+}
+
+main article::first-letter {
+	font-family: 'Playfair Display', serif;
+	font-size: 110px;
+	margin-right: 20px;
+	float: left;
+	line-height: 6rem;
+	/* color: #66f; */
+}
+
+main blockquote {
+	/* text-align: center; */
+	margin: 20px 0px;
+	font-size: 1.4em;
+	font-style: italic;
+}
+
+main blockquote::before,
+main blockquote::after {
+	margin: 0 10px;
+	font-size: 2em;
+	/* font-weight: bold; */
+}
+main blockquote::before { content: '“'; }
+main blockquote::after { content: '”'; }
+
+main a {
+	/* width: fit-content; */
+	font-weight: bold;
+	color: #EAA258;
+	text-decoration: none;
+	border: 2px solid #EAA258;
+	padding: 10px 30px;
+	margin: 5px;
+}
+
+main a[href="editor.html"] {
+	color: #6d8;
+	border-color: #6d8;
+}
+
+main a:hover { color: #66f; border-color: #66f; background-color: #ddd;}
+
+nav {
+	display: flex;
+	justify-content: flex-start;
+}
