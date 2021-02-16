@@ -5,11 +5,6 @@
 
 */
 
-* {
-	/* border: 1px dotted red; */
-	transition: all .4s ease-in;
-}
-
 .container {
 	/* width: 100%; */
 	/* height: auto; */
@@ -85,6 +80,7 @@ main a[href="editor.html"] {
 main a:hover { color: #66f; border-color: #66f; background-color: #ddd;}
 
 nav {
+	transition: all .4s ease-in;
 	display: flex;
 	justify-content: flex-start;
 }
