@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+/* font-family: 'Lato', sans-serif; */
+
+.about {
+	max-width: 1600px;
+	height: 100%;
+	background-color: #f6f6f6;
+}
+
+.header-text {
+	font-family: Lato;
+	font-size: 34px;
+	line-height: 1.2;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+	color: #3c3c3c;
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+
+.header-line {
+	width: 45px;
+	height: 4px;
+	background-color: #dddbdb;
+}
+
+.header-desc {
+	font-family: Lato;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+	color: #3c3c3c;
+	width: 560px;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.items {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-bottom: 100px;
+}
+
+.items-item {
+	margin: 15px;
+	text-align: left;
+}
+
+.item-image {
+	width: 270px;
+	height: 270px;
+	opacity: 0.9;
+	background-size: cover;
+}
+
+.item-name {
+	font-family: Lato;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 700;
+	color: #282528;
+}
+
+.item-desc {
+	font-family: Lato;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 300;
+	color: #646464;
+	transform: translateY(-15px);
+}
+.items-item:nth-of-type(1) .item-image { 
+	background-color: #00aed9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1.0;
+}
+.items-item:nth-of-type(2) .item-image { background: url("../img/photo1.png") no-repeat center; }
+.items-item:nth-of-type(3) .item-image { background: url("../img/photo2.png") no-repeat center; }
+.items-item:nth-of-type(4) .item-image { background: url("../img/photo3.png") no-repeat center; }
+
+.icon {
+	width: 42px;
+	height: 42px;
+	background-color: rgba(255,255,255,.3);
+	margin: 4px;
+	padding: 5px;
+	box-sizing: border-box;
+}	
+
+.icon img {
+	width: 32px;
+	height: 32px;
+}
+
+.icon:hover {
+	background-color: rgba(128, 128, 128, 0.8);
+}
+
+a {
+	text-decoration: none;
+}
+
+.items-item:hover .item-image {
+	opacity: 1.0;
+	transform: translateY(-10px);
+}
