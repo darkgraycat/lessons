@@ -4,13 +4,15 @@
 	justify-content: space-around;
 	background: linear-gradient(
 		to bottom,
-		rgb(255, 255, 255, 1.0) 25%,
+		rgb(255, 255, 255, 1.0) 50%,
 		rgba(255, 255, 255, 0.3) 75%,
 		rgba(255, 255, 255, 0.0) 100%
 	);
 	z-index: 9999;
 	padding-top: 10px;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
+
+	width: 100%;
 }
 
 .header__logo {

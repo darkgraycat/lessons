@@ -12,8 +12,10 @@
 	<link rel="stylesheet" href="css/date.css">
 	<link rel="stylesheet" href="css/button.css">
 	<link rel="stylesheet" href="css/title.css">
+	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/navigation.css">
+	<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="css/main.css">
 	<title>BEM</title>
 </head>
@@ -25,103 +27,228 @@
 			Cahee
 		</div>
 		<div class="header__navigation navigation">
-			<a href="#" class="navigation__button">HOME</a>
-			<a href="#" class="navigation__button">ABOUT</a>
+			<a href="#hero" class="navigation__button">HOME</a>
+			<a href="#about" class="navigation__button">ABOUT</a>
 			<a href="#" class="navigation__button">SERVICES</a>
 			<a href="#" class="navigation__button">GALLERY</a>
-			<a href="#" class="navigation__button">BLOG</a>
-			<a href="#" class="navigation__button">CONTACT</a>
+			<a href="#blog" class="navigation__button">BLOG</a>
+			<a href="#contact" class="navigation__button">CONTACT</a>
 		</div>
 	</div>
 
 	<div class="container">
 
-		<section class="content content_blog">
+		<!-- HERO -->
+		<section class="content content_hero" id="hero">
+			<div class="content content__row">
+				<div class="content content__block">
 
-
-			<div class="title">
-				<div class="title__title">
-					Blog
+					<div class="title">
+						<div class="title__title">
+							Fresh Life
+						</div>
+						<div class="title__desc">
+							Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis
+							nostrud exercitation ullamco.
+						</div>
+					</div>
 				</div>
-				<div class="title__desc">
-					Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+
+			</div>
+		</section>
+
+		<!-- ABOUT -->
+		<section class="content content_about" id="about">
+			<div class="content content__row">
+				<div class="content content__block content__block_img"></div>
+				<div class="content content__block">
+					<div class="title">
+						<div class="title__title">
+							About Us
+						</div>
+						<div class="title__desc">
+							Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+							velit esse cillum.
+							Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+							accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+						</div>
+					</div>
 				</div>
 			</div>
+		</section>
 
+		<!-- BLOG -->
+		<section class="content content_blog" id="blog">
 
-			<div class="cards">
+			<div class="content__row">
 
-				<div class="cards__card card card_1">
-
-					<div class="date">
-						<div class="date__day">
-							20
-						</div>
-						<div class="date__month">
-							nov
-						</div>
+				<div class="title">
+					<div class="title__title">
+						Blog
 					</div>
-
-					<div class="card__text">
-						Green Smoothies: Too Much of a Good Thing?
+					<div class="title__desc">
+						Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
 					</div>
-					<div class="card__desc">
-						By Auskteez - 2 hours ago
-					</div>
-
-				</div>
-
-				<div class="cards__card card card_2">
-
-					<div class="date">
-						<div class="date__day">
-							14
-						</div>
-						<div class="date__month">
-							nov
-						</div>
-					</div>
-
-					<div class="card__text">
-						Growing Food and a “Thirst” for Innovation
-					</div>
-					<div class="card__desc">
-						By Auskteez - 3 hours ago
-					</div>
-
-				</div>
-
-				<div class="cards__card card card_3">
-
-					<div class="date">
-						<div class="date__day">
-							10
-						</div>
-						<div class="date__month">
-							nov
-						</div>
-					</div>
-
-					<div class="card__text">
-						Pesticides & Food: What You Need to Know
-					</div>
-					<div class="card__desc">
-						By Auskteez - 6 hours ago
-					</div>
-
 				</div>
 
 			</div>
 
-			<button class="button">
-				VIEW MORE
-			</button>
+
+			<div class="content__row">
+
+				<div class="cards">
+
+					<div class="cards__card card card_1">
+
+						<div class="card__date date">
+							<div class="date__day">
+								20
+							</div>
+							<div class="date__month">
+								nov
+							</div>
+						</div>
+
+						<div class="card__text">
+							Green Smoothies: Too Much of a Good Thing?
+						</div>
+						<div class="card__desc">
+							By Auskteez - 2 hours ago
+						</div>
+
+					</div>
+
+					<div class="cards__card card card_2">
+
+						<div class="card__date date">
+							<div class="date__day">
+								14
+							</div>
+							<div class="date__month">
+								nov
+							</div>
+						</div>
+
+						<div class="card__text">
+							Growing Food and a “Thirst” for Innovation
+						</div>
+						<div class="card__desc">
+							By Auskteez - 3 hours ago
+						</div>
+
+					</div>
+
+					<div class="cards__card card card_3">
+
+						<div class="card__date date">
+							<div class="date__day">
+								10
+							</div>
+							<div class="date__month">
+								nov
+							</div>
+						</div>
+
+						<div class="card__text">
+							Pesticides & Food: What You Need to Know
+						</div>
+						<div class="card__desc">
+							By Auskteez - 6 hours ago
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="content__row">
+
+				<button class="content__row button">
+					VIEW MORE
+				</button>
+
+			</div>
+
 
 
 		</section>
 
+		<!-- CONTACT -->
+		<section class="content content_contact" id="contact">
+
+			<div class="content__row">
+
+				<div class="content__title title">
+					<div class="title__title">
+						Contact
+					</div>
+					<div class="title__desc">
+						For new projects, ideas, business or anything
+						you'd like to discuss, contact with me!
+					</div>
+				</div>
+
+			</div>
+
+			<div class="content__row last-row">
+				<div class="content__block">
+
+					<form action="" class="contact-form">
+
+						<input type="text" class="contact-form__elem contact-form__elem_name"
+							placeholder="Auskteez Tran">
+						<input type="text" class="contact-form__elem contact-form__elem_email"
+							placeholder="Your email...">
+						<input type="text" class="contact-form__elem contact-form__elem_number"
+							placeholder="Your phone number...">
+
+						<textarea class="contact-form__elem contact-form__elem_message"
+							placeholder="Your message..."></textarea>
+
+					</form>
+
+				</div>
+				<div class="content__block">
+
+					<div class="contact-info">
+						<h4>ADDRESS</h4>
+						<p>123 City name, Street, City, Country</p>
+						<h4>EMAIL</h4>
+						<p>cahee@domain.com</p>
+						<h4>PHONE</h4>
+						<p>+012 345 6789</p>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+
+
+
 	</div>
+
+
+	<div class="footer">
+
+		<div class="footer__copyright">
+			© 2015 Company. All right reserved.
+		</div>
+		<div class="footer__logo">
+			Cahee
+		</div>
+		<div class="footer__author">
+			Made with <span>love</span> by Auskteez
+		</div>
+
+	</div>
+
+
 
 </body>
 

@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+.content_hero {
+	font-family: Raleway;
+	background-color: #ffffff;
+	background: url('../img/hero-img.png') no-repeat center center fixed;
+	background-size: cover;
+}
+
+.content_hero .title {
+	color: #262626;
+	text-align: left;
+	width: 440px;
+	position: absolute;
+	left: 0px;
+}
+
+.content_hero .title__title {
+	font-weight: 900;
+}
+
 .content_blog {
 	font-family: Raleway;
 	background-color: #b07cf7;
-	min-height: 865px;
 }
 
 .content_blog .title {
@@ -17,7 +35,41 @@
 
 .content_blog .button {
 	margin: 50px auto;
+	width: 200px;
 }
+
+.content_contact {
+	background: url('../img/contact-bg.png');
+	background-size: cover;
+	justify-content: flex-start;
+}
+
+.content_contact .title {
+	font-family: Raleway;
+	color: #262626;
+	max-width: 350px;
+}
+
+.content_contact .title__title {
+	margin-bottom: 48px;
+}
+
+.content_about {
+	font-family: Raleway;
+	color: #ffffff;
+	background-color: #00c4c4;
+}
+
+.content_about .content__block_img {
+	background: url('../img/about-img.png') no-repeat center;
+	background-size: contain;
+}
+
+.content_about .content__block {
+	width: 560px;
+	height: 560px;
+}
+
 
 .card_1 {
 	background: linear-gradient(
@@ -65,6 +117,28 @@
 	width: 600px;
 }
 
-.header {
-	width: 100%;
+.footer {
+	font-family: Raleway;
+	color: #B9B9B9;
+	font-size: 16px;
+}
+
+.footer__author {
+	font-size: 15px;
+}
+
+.footer__author span {
+	color: #e7066f;
+}
+
+.footer__logo {
+	font-family: Pacifico;
+	font-size: 25px;
+	color: #B9B9B9;
+}
+
+
+
+.last-row {
+	margin-bottom: 200px;
 }

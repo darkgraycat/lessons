@@ -4,4 +4,20 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	min-height: 100vh;
+}
+
+.content__row {
+	max-width: 1200px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 20px;
+}
+
+.content__block {
+	margin: 20px;
 }
