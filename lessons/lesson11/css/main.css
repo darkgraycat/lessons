@@ -60,6 +60,9 @@
 	background-color: #00c4c4;
 }
 
+.content_about .title {
+	text-align: left;
+}
 .content_about .content__block_img {
 	background: url('../img/about-img.png') no-repeat center;
 	background-size: contain;
