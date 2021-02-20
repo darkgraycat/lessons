@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .content_blog {
 	font-family: Raleway;
@@ -49,4 +50,17 @@
 	position: absolute;
 	top: 30px;
 	left: 30px;
+}
+
+
+.header__logo {
+	font-family: Pacifico;
+	font-size: 50px;
+}
+
+.header__navigation {
+	font-family: Raleway;
+	font-weight: 700;
+	font-size: 16px;
+	width: 600px;
 }

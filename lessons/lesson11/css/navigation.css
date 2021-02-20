@@ -1,0 +1,18 @@
+.navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.navigation__button {
+	top: 100px;
+	padding: 10px 0;
+	border-top: 3px solid rgba(0,0,0,0);
+	text-decoration: none;
+	color: #000000;
+}
+
+.navigation__button:hover {
+	border-top: 3px solid #ff6033;
+}
