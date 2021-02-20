@@ -4,7 +4,7 @@
 .content_hero {
 	font-family: Raleway;
 	background-color: #ffffff;
-	background: url('../img/hero-img.png') no-repeat center center fixed;
+	background: url('../img/hero-img.png') no-repeat center center;
 	background-size: cover;
 }
 
