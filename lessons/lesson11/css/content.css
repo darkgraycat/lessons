@@ -15,7 +15,6 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	margin: 20px;
 }
 
 .content__block {

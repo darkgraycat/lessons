@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+/* 
+	TODO:
+
+	1. Adaptive content element with rows and cols (no js)
+	2. Customizable tabs (instead of bullets, no js) 
+	3. Stars - element with values from 1 to 5 (custom progress bar?)
+	4. Customizable dropdown menu (+spoilers +burger-menu)
+	5. Customizable buttons
+*/
+
+
+/* BASIC  -- reusable elements. i hope */
+
+/* content */
+.content,
+.content__row,
+.content__block {
+	display: flex;
+	position: relative;
+}
+
+.content {
+	flex-direction: column;
+}
+
+.content__row {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.content__block {
+	flex-direction: column;
+}
+
+/* bullets */
+.bullets {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.bullets__bullet {
+	appearance: none;
+	border-radius: 50%;
+	width: 12px;
+	height: 12px;
+	outline: none;
+	background-color: #fff;
+}
+
+.bullets__bullet:checked {
+	width: 15px;
+	height: 15px;
+	border: 2px solid #888;
+}
+
+
+/* use --color css variable */
+.bullets__bullet {
+	background-color: var(--color);
+}
+/* instead this */
+/*
+.bullets__bullet[value="dark"] {background-color: #1f273f;}
+.bullets__bullet[value="white"] {background-color: #ffffff;}
+.bullets__bullet[value="red"] {background-color: #ed3333;}
+.bullets__bullet[value="teal"] {background-color: #29e3ea;} 
+
+*/
+
+
+
+/* dropdown */
+.dropdown {
+	outline: none;
+	background-color: #111a28;
+	border: 1px solid #fff;
+	color: #fff;
+	opacity: 0.5;
+	padding: 10px 15px;
+}
+
+.dropdown__item:nth-of-type(1) {
+	display: none;
+}
+
+.dropdown__item {
+	background-color: #111a28;
+	color: #fff;
+}
+
+.dropdown:hover { background-color: #fff5; }
+.dropdown:active { color: #111a28; }
+
+/* stars */
+.stars {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100px;
+}
+
+.stars__star {
+	width: 16px;
+	height: 16px;
+	background: url('../img/second/star.png') no-repeat center;
+	background-size: cover;
+}
+
+/* add-button */
+.add-button {
+	padding: 15px 50px;
+	margin-top: 20px;
+	border: 1px solid #fff3;
+	outline: none;
+	background-color: #fff2;
+	color: #E1E1E1;
+}
+
+.add-button:hover { background-color: #fff5; }
+.add-button:active { color: #111a28; }
+
+
+
+
+
+/* CUSTOMIZATION */
+
+/*
+	Styles for current page
+*/
+
+.container {
+	background: url('../img/second/main\ bg.png') no-repeat center;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto;
+
+	font-family: 'Raleway', sans-serif;
+	color: #ffffff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content {
+	/* max-width: 680px; */
+	/* max-height: 400px; */
+	max-width: 90%;
+	padding: 20px;
+}
+
+.shoes-content {
+	border-radius: 10px;
+	filter: drop-shadow(0 0 32.5px rgba(0,0,0,0.82));
+	background-color: #111a28;
+}
+
+.logo-row {
+	margin: 10px;
+	justify-content: flex-start;
+}
+
+.shoes-row {
+	align-self: center;
+	justify-self: center;
+	/* justify-content: flex-start; */
+	/* align-items: flex-start; */
+}
+
+.image-block {
+	max-width: 330px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.image-block .bullets {
+	width: 100px;
+	margin-top: 40px;
+}
+
+.text-block {
+	max-width: 200px;
+	padding: 20px;
+}
+
+.dropdown-row {
+	align-self: flex-start;
+	padding: 0px;
+	margin-top: 20px;
+}
+
+.dropdown {
+	margin-right: 2px;
+}
+
+
+.stars__star:nth-of-type(4),
+.stars__star:nth-of-type(5) {
+	opacity: 0.2;
+}
+
+
+/* some "kostyl" styles */
+
+h2, p {
+	font-weight: 100;
+	opacity: 0.7;
+	margin: 10px 0px;
+}
+
+h2 {
+	font-weight: 300;
+	margin-bottom: 0px;
+}
+
+.shoes-image {
+	width: 100%;
+	display: none;
+}
+.shoes-image:nth-of-type(1) {
+	display: block;
+}

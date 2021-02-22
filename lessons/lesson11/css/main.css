@@ -145,3 +145,7 @@
 .last-row {
 	margin-bottom: 200px;
 }
+
+a {
+	text-decoration: none;
+}

@@ -1,0 +1,23 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	
+	margin: 0 auto;
+	width: fit-content;
+}	.content__row {
+		display: flex;
+		flex-direction: row;
+}	.content__block {
+		display: flex;
+		flex-direction: column;
+}
+
+div {
+	border: 1px solid #000;
+}
+
+.content {
+	border: 1px solid #0f0;
+}

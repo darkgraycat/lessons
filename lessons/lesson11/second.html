@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/second.css">
+	<title>Normal BEM markup</title>
+</head>
+
+<body>
+
+
+	<!-- Trying to BEM -->
+	<!-- Classes after "block__element" just for customization -->
+
+	<div class="container">
+
+		<div class="content shoes-content">
+
+			<div class="content__row logo-row">
+				<div class="content__block">
+					<img class="logo" src="img/second/logo.png" alt="logo">
+				</div>
+			</div>
+
+
+			<div class="content__row shoes-row">
+
+				<div class="content__block image-block">
+					<img id="dark" class="shoes-image" src="img/second/shoes.png" alt="">
+					<img id="white" class="shoes-image" src="img/second/shoes_white.png" alt="">
+					<img id="red" class="shoes-image" src="img/second/shoes_red.png" alt="">
+					<img id="teal" class="shoes-image" src="img/second/shoes_teal.png" alt="">
+					<form class="bullets">
+						<!-- bullets with custom collors -->
+						<input type="radio" class="bullets__bullet" name="color" value="dark" style="--color: #1f273f"
+							checked>
+						<input type="radio" class="bullets__bullet" name="color" value="white" style="--color: #ffffff">
+						<input type="radio" class="bullets__bullet" name="color" value="red" style="--color: #ed3333">
+						<input type="radio" class="bullets__bullet" name="color" value="teal" style="--color: #29e3ea">
+					</form>
+
+				</div>
+
+				<div class="content__block text-block">
+					<h2>Nike SB Stefan Janoski Max</h2>
+					<p>Unisex Skateboarding Shoe</p>
+					<div class="stars">
+						<div class="stars__star"></div>
+						<div class="stars__star"></div>
+						<div class="stars__star"></div>
+						<div class="stars__star"></div>
+						<div class="stars__star"></div>
+					</div>
+
+					<div class="content__row dropdown-row">
+						<select class="dropdown">
+							<option value="" class="dropdown__item" disabled selected>Qty</option>
+							<option value="40" class="dropdown__item">1</option>
+							<option value="42" class="dropdown__item">2</option>
+							<option value="44" class="dropdown__item">3</option>
+							<option value="46" class="dropdown__item">4</option>
+							<option value="46" class="dropdown__item">5</option>
+						</select>
+
+						<select class="dropdown">
+							<option value="" class="dropdown__item" disabled selected>Size</option>
+							<option value="40" class="dropdown__item">40</option>
+							<option value="42" class="dropdown__item">42</option>
+							<option value="44" class="dropdown__item">44</option>
+							<option value="46" class="dropdown__item">46</option>
+						</select>
+					</div>
+
+					<button class="add-button">
+						Add to cart
+					</button>
+
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script>
+
+
+		// its no better way. i know
+		window.onload = (e) => {
+			const bullets = document.querySelectorAll('.bullets__bullet')
+			const images = document.querySelectorAll('.shoes-image')
+			for (bullet of bullets) {
+				bullet.onclick = (e) => {
+					for (image of images) {
+						image.style.display = 'none'
+					}
+					document.querySelector('#' + e.target.value).style.display = 'block'
+				}
+			}
+		}
+
+
+	</script>
+
+</body>
+
+</html>
