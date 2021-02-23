@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+.container {
+	/* non prod styles */
+	width: 100%;
+	height: 100%;
+	background-color: #E5EEEE;
+	padding: 50px 0px;
+}
+
+/* .reg-form */
+
+.reg-form {
+	font-family: Quicksand;
+	color: #fbf6e4;
+	width: 400px;
+	height: 500px;
+	background-color: #166a6a;
+	background-image: linear-gradient(32.0deg, #3023ae 3%, #c86dd7 96%);
+	margin: 0px auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.reg-form__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: 500px;
+	background: url('../img/reg-form_bg.png') no-repeat center;
+	background-size: cover;
+	opacity: 0.1;
+}
+
+.reg-form__content {
+	width: 260px;
+	height: 400px;
+}
+
+.reg-form__footer {
+	width: 260px;
+	position: absolute;
+	bottom: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.reg-form__footer > a {
+	font-family: Quicksand;
+	font-size: 13px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #fbf6e4;
+	text-decoration: none;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #fbf6e4;
+	opacity: .3;
+}
+
+/* customize forms */
+
+.form {
+	margin-top: 20px;
+}
+
+.input-form {
+	font-size: 16px;
+}
+
+.input-form > input {
+	width: 260px;
+	height: 40px;
+	background-color: transparent;
+	border: 2px solid rgba(191,185,204,0.53);
+	outline: none;
+	color: #fbf6e4;
+	text-align: center;
+	margin-top: 8px;
+	box-sizing: border-box;
+}
+
+.check-form > label {
+	font-size: 13px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #fbf6e4;
+	vertical-align: text-top;
+}
+
+.check-form > input {
+	width: 16px;
+	height: 16px;
+}
+
+.submit-form {
+	position: absolute;
+	bottom: 0px;
+}
+
+.submit-form > input {
+	width: 260px;
+	height: 40px;
+	background-color: #23ae92;
+	color: #fbf6e4;
+	font-size: 18px;
+	font-weight: 700;
+	border: none;
+	outline: none;
+}
+
+.submit-form > input:hover {
+	background-color: #e66a64;
+}
+
+.submit-form > input:active {
+	transform: scale(1.05);
+}
+
+.text-form > textarea{
+	width: 260px;
+	height: 80px;
+	resize: none;
+	background-color: transparent;
+	color: #fbf6e4;
+	font-weight: 300;
+	font-size: 12px;
+	outline: none;
+	border: none;
+}
+
+.text-form > textarea::-webkit-scrollbar {
+	display: none;
+  }
+
+
+.tabs__content {
+	height: 300px;
+}
+
+/* tabs */
+.tabs {
+	position: relative;
+	font-family: Quicksand;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #fbf6e4;
+}
+.tabs > input { display: none; }
+.tabs > label {
+	display: inline-block;
+	margin-right: 26px;
+	padding-bottom: 4px;
+	font-size: 18px;
+	opacity: 0.6;
+}
+.tabs > label:hover {
+	opacity: 0.9;
+}
+
+.tabs > div {
+	position: absolute;
+	top: 3em;
+	display: none;
+}
+.tabs > input:checked + label {
+	opacity: 1.0;
+	border-bottom: 2px solid #e66a64;
+}
+.tabs > input:checked + label + div {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

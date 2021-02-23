@@ -1,13 +1,6 @@
 .footer {
-	position: fixed;
-	bottom: 0px;
-
-	background: linear-gradient(
-		to top,
-		rgba(38, 38, 38, 1.0) 70%,
-		rgba(38, 38, 38, 0.5) 85%,
-		rgba(38, 38, 38, 0.0) 100%
-	);
+	position: relative;
+	background-color: rgba(38, 38, 38);
 	height: 90px;
 	display: flex;
 	justify-content: space-around;

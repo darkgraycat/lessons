@@ -149,3 +149,5 @@
 a {
 	text-decoration: none;
 }
+
+.header, .footer {display: none;}

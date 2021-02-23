@@ -31,4 +31,5 @@ h1 {
 	outline-offset: 4px;
 	color: #fff;
 	padding: 10px;
+	/* word-wrap:break-word; */
 }
