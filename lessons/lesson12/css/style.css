@@ -130,6 +130,8 @@
 	font-size: 12px;
 	outline: none;
 	border: none;
+	text-align: justify;
+	
 }
 
 .text-form > textarea::-webkit-scrollbar {
