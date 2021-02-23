@@ -22,7 +22,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 5px 20px 20px  5px  rgba(32,32,64, .5);
+	box-shadow: 0px 30px 30px  -10px  rgba(32,48,128, 1);
 }
 
 .reg-form__bg {
