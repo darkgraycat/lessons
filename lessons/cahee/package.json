@@ -1,0 +1,12 @@
+{
+  "name": "cahee",
+  "version": "1.0.0",
+  "description": "beetroot academy markup",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo helloW",
+    "sass": "sass sass/:css/ --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
