@@ -1,13 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+// constants
 $outer-width: 900px;
 $inner-width: 600px;
+$outer600-width: 575px;
+$inner900-width: 400px;
 
-@media (max-width: 900px) {
-	$outer-width: 600px;
-	$inner-width: 450px;
-}
+
+
 
 .container {
 
@@ -52,8 +53,8 @@ $inner-width: 600px;
 				text-transform: uppercase;
 				text-align: center;
 				border: none;
-				legend {width: $inner-width;}
-				h1 {
+				legend {
+					width: 100%;
 					font-size: 54px;
 					letter-spacing: 8px;
 					font-weight: 700;
@@ -171,6 +172,7 @@ $inner-width: 600px;
 	border: 2px solid #3c3c3c;
 	width: 100%;
 	margin: 100px auto;
+	box-sizing: border-box;
 
 	legend {
 		width: 420px;
@@ -211,5 +213,30 @@ $inner-width: 600px;
 		line-height: 26px;
 		font-weight: 300;
 		text-align: center;
+	}
+}
+
+
+@media (max-width: 900px) {
+	.container__block {
+		max-width: 850px;
+	}
+	.bordered-block {
+		max-width: 500px;
+		p {
+			max-width: 500px;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.container__block {
+		max-width: 575px;
+	}
+	.bordered-block {
+		max-width: 500px;
+		p {
+			max-width: 450px;
+		}
 	}
 }

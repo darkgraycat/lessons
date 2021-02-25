@@ -40,9 +40,7 @@
   border: none;
 }
 .container__row_header .bordered-block legend {
-  width: 600px;
-}
-.container__row_header .bordered-block h1 {
+  width: 100%;
   font-size: 54px;
   letter-spacing: 8px;
   font-weight: 700;
@@ -147,6 +145,7 @@
   border: 2px solid #3c3c3c;
   width: 100%;
   margin: 100px auto;
+  box-sizing: border-box;
 }
 .bordered-block legend {
   width: 420px;
@@ -186,6 +185,31 @@
   line-height: 26px;
   font-weight: 300;
   text-align: center;
+}
+
+@media (max-width: 900px) {
+  .container__block {
+    max-width: 850px;
+  }
+
+  .bordered-block {
+    max-width: 500px;
+  }
+  .bordered-block p {
+    max-width: 500px;
+  }
+}
+@media (max-width: 650px) {
+  .container__block {
+    max-width: 575px;
+  }
+
+  .bordered-block {
+    max-width: 500px;
+  }
+  .bordered-block p {
+    max-width: 450px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
