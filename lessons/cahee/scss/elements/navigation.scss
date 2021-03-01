@@ -1,0 +1,30 @@
+.navigation {
+
+	background-color: $clr_navigation_bg;
+
+	&__list {
+		list-style: none;
+		text-align: right;
+		padding-left: 10px;
+	}
+
+	&__item {
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 700;
+		text-align: right;
+		text-transform: uppercase;
+		margin: 5px;
+		padding-top: 5px;
+		border-top: 3px solid transparent;
+
+		&:hover {
+			border-top-color: $clr_navigation_highlight;
+		}
+	}
+
+	&__link {
+		color: $clr_navigation_fg;
+		text-decoration: none;
+	}
+}

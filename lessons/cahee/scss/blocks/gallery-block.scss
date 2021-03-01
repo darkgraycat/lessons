@@ -1,0 +1,55 @@
+.gallery-block {
+	display: flex;
+
+	background-color: #ffe92f;
+	min-height: 1200px;
+	height: 100%;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	
+	// TODO: refactor to titled-text component
+	&__text {
+		// margin: 0 10px;
+	}
+
+	&__title {
+		font-size: 90px;
+		color: $clr_text_main;
+		font-family: $font_main;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__description {
+
+		max-width: 600px;
+		font-size: 17px;
+		line-height: 27px;
+		color: $clr_text_main;
+		font-weight: 300;
+		font-family: $font_main;
+		text-align: center;
+		margin: 40px auto;
+		text-align: justify;
+	}
+
+	&__button {
+		margin: 70px auto;
+		background-color: #5585a2;
+		color: #ffffff;
+		font-family: $font_main;
+		
+	}
+
+	&__images {
+		align-self: center;
+	}
+
+
+}
+

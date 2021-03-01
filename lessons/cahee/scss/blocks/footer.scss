@@ -1,0 +1,22 @@
+.footer {
+	position: relative;
+	background-color: rgba(38, 38, 38);
+	height: 90px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 9999;
+	font-size: 16px;
+	font-weight: 300;
+	font-family: $font_main;
+	color: $clr_text_light;
+
+	width: 100%;
+
+	&__logo {
+		margin: 0 20px;
+		font-size: 25px;
+		font-weight: 400;
+		font-family: $font_logo;
+	}
+}

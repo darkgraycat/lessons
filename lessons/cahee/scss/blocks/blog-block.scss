@@ -1,0 +1,54 @@
+.blog-block {
+	display: flex;
+
+	background-color: #b07cf7;
+	min-height: 860px;
+	height: 100%;
+	
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	// TODO: refactor to titled-text component
+	&__text {
+	}
+
+	&__title {
+		font-size: 90px;
+		color: $clr_text_light;
+		font-family: $font_main;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__description {
+		max-width: 570px;
+		font-size: 17px;
+		line-height: 27px;
+		color: $clr_text_light;
+		font-weight: 300;
+		font-family: $font_main;
+		text-align: center;
+		margin: 40px auto;
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	&__button {
+		margin: 40px auto;
+		font-family: $font_main;
+		color: $clr_text_light;
+		background-color: #f72b3b;
+	}
+}

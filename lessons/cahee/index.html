@@ -5,21 +5,263 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Cahee Markup</title>
+	<title>Cahee 3</title>
 </head>
 
 <body>
 
 	<div class="container">
 
-		Test
 
-		<div class="container__header">
-			Sass
-		</div>
+		<header class="header">
 
-		Now
+			<div class="header__content content">
+
+				<div class="header__logo">Cahee</div>
+
+				<nav class="header__navigation navigation">
+					<ul class="navigation__list">
+						<li class="navigation__item"><a class="navigation__link" href="#home">Home</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="#services">Services</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="#gallery">Gallery</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="#blog">Blog</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+		</header>
+
+		<main>
+			<!-- hero block -->
+			<section class="hero-block" id="home">
+				<div class="hero-block__content content">
+					<div class="hero-block__text">
+						<h1 class="hero-block__title title">
+							Fresh Life
+						</h1>
+						<p class="hero-block__description">
+							Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis
+							nostrud exercitation ullamco.
+						</p>
+					</div>
+					<a class="hero-block__button simple-button" href="#">GET FREE NOW</a>
+				</div>
+			</section>
+
+			<!-- about block -->
+			<section class="about-block" id="about">
+				<div class="about-block__content content">
+					<div class="about-block__image"></div>
+					<div class="about-block__text">
+						<h2 class="about-block__title title">About Us</h2>
+						<p class="about-block__description">
+							Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+							velit esse cillum.
+						</p>
+						<p class="about-block__description">
+							Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+							accusantium
+							doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- services block -->
+			<section class="services-block" id="services">
+				<div class="services-block__content content">
+					<div class="services-block__text">
+						<div class="iconed-button">
+							<div class="iconed-button__text">
+								Online Shopping
+							</div>
+							<div class="iconed-button__icon">
+								<i class="icon-icon-1"></i>
+							</div>
+						</div>
+						<div class="iconed-button">
+							<div class="iconed-button__text">
+								Quality Product
+							</div>
+							<div class="iconed-button__icon">
+								<i class="icon-icon-2"></i>
+							</div>
+						</div>
+						<div class="iconed-button">
+							<div class="iconed-button__text">
+								Domestic & International Delivery
+							</div>
+							<div class="iconed-button__icon">
+								<i class="icon-icon-3"></i>
+							</div>
+						</div>
+						<div class="iconed-button">
+							<div class="iconed-button__text">
+								Well Organized
+							</div>
+							<div class="iconed-button__icon">
+								<i class="icon-icon-4"></i>
+							</div>
+						</div>
+					</div>
+					<div class="services-block__image title">
+						Our services
+					</div>
+				</div>
+			</section>
+
+			<!-- gallery block -->
+			<section class="gallery-block" id="gallery">
+				<div class="gallery-block__content content">
+					<div class="gallery-block__text">
+						<h2 class="gallery-block__title title">Gallery</h2>
+						<p class="gallery-block__description">
+							Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat.
+						</p>
+					</div>
+					<div class="gallery-block__images image-container content">
+						<div class="image-container__row">
+							<img src="./img/gallery-img 1.png" alt="" width="770px" height="550px">
+							<div class="image-container__col">
+								<img src="./img/gallery-img 2.png" alt="" width="370px" height="260px">
+								<img src="./img/gallery-img 3.png" alt="" width="370px" height="260px">
+							</div>
+						</div>
+						<div class="image-container__row">
+							<img src="./img/gallery-img 4.png" alt="" width="570px" height="400px">
+							<img src="./img/gallery-img 5.png" alt="" width="570px" height="400px">
+						</div>
+					</div>
+					<a class="gallery-block__button simple-button" href="#">VIEW MORE</a>
+				</div>
+			</section>
+
+			<!-- subscribe block -->
+			<section class="subscribe-block" id="subscribe">
+				<div class="subscribe-block__content content">
+					<div class="subscribe-block__text">
+						<h2 class="subscribe-block__title title">Subscribe To Us</h2>
+						<p class="subscribe-block__description">
+							Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam.
+						</p>
+					</div>
+					<form class="subscribe-block__submit submit-form" action="javascript:void(0);">
+						<input class="submit-form__text" type="email" placeholder="Your email address">
+						<input class="submit-form__button simple-button" type="submit" value="SUBSCRIBE">
+					</form>
+				</div>
+			</section>
+
+			<section class="blog-block" id="blog">
+				<div class="blog-block__content content">
+					<div class="blog-block__text">
+						<h2 class="blog-block__title title">Blog</h2>
+						<p class="blog-block__description">
+							Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+							ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+							velit.
+						</p>
+					</div>
+					<div class="blog-block__cards">
+						<!-- img instead bg-image because want to split style and content -->
+						<div class="card">
+							<img class="card__image" src="img/blog-img 1.png" alt="">
+							<div class="card__effect"></div>
+							<div class="card__date">
+								<p>20</p>NOV
+							</div>
+							<div class="card__text">
+								Green Smoothies: Too Much of a Good Thing?
+							</div>
+							<div class="card__description">
+								By Auskteez - 2 hours ago
+							</div>
+						</div>
+						<div class="card">
+							<img class="card__image" src="img/blog-img 2.png" alt="">
+							<div class="card__effect"></div>
+							<div class="card__date">
+								<p>14</p>NOV
+							</div>
+							<div class="card__text">
+								Growing Food and a “Thirst” for Innovation
+							</div>
+							<div class="card__description">
+								By Auskteez - 3 hours ago
+							</div>
+						</div>
+						<div class="card">
+							<img class="card__image" src="img/blog-img 3.png" alt="">
+							<div class="card__effect"></div>
+							<div class="card__date">
+								<p>10</p>NOV
+							</div>
+							<div class="card__text">
+								Pesticides & Food: What You Need to Know
+							</div>
+							<div class="card__description">
+								By Auskteez - 6 hours ago
+							</div>
+						</div>
+					</div>
+					<a class="blog-block__button simple-button" href="#">VIEW MORE</a>
+				</div>
+			</section>
+
+			<section class="contact-block" id="contact">
+				<div class="contact-block__content content">
+					<div class="contact-block__text">
+						<h2 class="contact-block__title title">Contact</h2>
+						<p class="contact-block__description">
+							For new projects, ideas, business or anything
+							you'd like to discuss, contact with me!
+						</p>
+					</div>
+
+					<div class="contact-block__info">
+
+						<form class="contact-block__form contact-form" action="">
+							<input type="text" class="contact-form__elem" placeholder="Auskteez Tran">
+							<input type="email" class="contact-form__elem" placeholder="Your email...">
+							<input type="tel" class="contact-form__elem" placeholder="Your phone number...">
+							<textarea class="contact-form__elem contact-form__elem-message"
+								placeholder="Your message..."></textarea>
+						</form>
+						<div class="contact-block__text">
+							<h4>ADDRESS</h4>
+							<p>123 City name, Street, City, Country</p>
+							<h4>EMAIL</h4>
+							<p>cahee@domain.com</p>
+							<h4>PHONE</h4>
+							<p>+012 345 6789</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__copyright">
+				© 2015 Company. All right reserved.
+			</div>
+			<div class="footer__logo">
+				Cahee
+			</div>
+			<div class="footer__author">
+				Made with <span style="color:rgb(255, 68, 130)">love</span> by Auskteez
+			</div>
+		</footer>
 
 	</div>
 

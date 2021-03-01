@@ -1,0 +1,55 @@
+.about-block {
+	display: flex;
+
+	background-color: #00BABA;
+	min-height: 700px;
+	height: 100%;
+
+	&__content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	&__image {
+		background: url('../img/about-img.png') no-repeat left;
+		background-size: contain;
+		filter: drop-shadow(-16px 8px 25px rgba(0,0,0,0.5));
+		max-width: 550px;
+		height: 550px;
+		width: 100%;
+		margin: 40px 10px;
+		
+		@media (max-width: 1200px) { max-width: 350px;}
+		@media (max-width: 800px) {
+			position: absolute;
+			top: -20px;
+			opacity: 0.5;
+			right: 0px;
+			max-width: 350px;
+		}
+	}
+
+	// TODO: refactor to titled-text component
+	&__text {
+	}
+
+	&__title {
+		font-size: 90px;
+		color: $clr_text_light;
+		font-family: $font_main;
+		font-weight: 700;
+	}
+
+	&__description {
+
+		max-width: 500px;
+		font-size: 17px;
+		line-height: 27px;
+		color: $clr_text_light;
+		font-weight: 300;
+		font-family: $font_main;
+		text-align: justify;
+	}
+}

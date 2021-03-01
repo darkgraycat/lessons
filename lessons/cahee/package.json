@@ -5,7 +5,7 @@
   "main": "js/index.js",
   "scripts": {
     "test": "echo helloW",
-    "sass": "sass sass/:css/ --watch"
+    "sass": "sass scss/style.scss:css/style.css --watch"
   },
   "author": "",
   "license": "ISC"

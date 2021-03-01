@@ -1,0 +1,60 @@
+@import 'fonts.scss';
+@import 'variables.scss';
+
+@import 'blocks/header.scss';
+@import 'blocks/hero-block.scss';
+@import 'blocks/about-block.scss';
+@import 'blocks/services-block.scss';
+@import 'blocks/gallery-block.scss';
+@import 'blocks/subscribe-block.scss';
+@import 'blocks/blog-block.scss';
+@import 'blocks/contact-block.scss';
+@import 'blocks/footer.scss';
+
+@import 'elements/content.scss';
+@import 'elements/navigation.scss';
+@import 'elements/buttons.scss';
+@import 'elements/iconed-button.scss';
+@import 'elements/image-container.scss';
+@import 'elements/submit-form.scss';
+@import 'elements/card.scss';
+@import 'elements/contact-form.scss';
+
+
+.none {
+	display: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+
+// .header,
+// .hero-block,
+// .about-block,
+// .services-block
+// .gallery-block
+// {
+// 	display: none;
+// }
+
+// body::-webkit-scrollbar { width: 0 !important; }
+
+
+
+/**********************************************************
+*********************** TO DO LIST: ***********************
+***********************************************************
+1. Refactor blocks to one general blocks and use 
+modificators:
+	hero-block, about-block >>> section-block
+and with classes: section-block section-block_hero
+	
+
+
+
+
+***********************************************************
+***********************************************************
+**********************************************************/

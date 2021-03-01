@@ -1,0 +1,49 @@
+.hero-block {
+	display: flex;
+	
+	background: url('../img/hero-img.png') no-repeat center;
+	background-size: cover;
+	min-height: 700px;
+	height: 100%;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	&__text {
+		// margin: 0 10px;
+	}
+
+	&__title {
+		font-size: 60px;
+		color: $clr_text_main;
+		font-family: $font_main;
+		font-weight: 900;
+	}
+
+	&__description {
+		max-width: 370px;
+		font-size: 17px;
+		line-height: 27px;
+		color: $clr_text_main;
+		font-weight: 300;
+		font-family: $font_main;
+		padding-bottom: 25px;
+		text-align: justify;
+
+
+		@media (max-width: 600px) {
+			max-width: 220px;
+		}
+	}
+
+	&__button {
+		background-color: #ff6033;
+		color: $clr_text_light;
+		font-family: $font_main;
+	}
+
+}
