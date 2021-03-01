@@ -8,7 +8,9 @@ $outer600-width: 575px;
 $inner900-width: 400px;
 
 
-
+body {
+	margin: 0px;
+}
 
 .container {
 
@@ -135,8 +137,9 @@ $inner900-width: 400px;
 
 .img-block {
 
-	width: 550px;
+	max-width: 550px;
 	height: 240px;
+	width: 100%;
 
 	margin: 8px;
 
@@ -175,7 +178,8 @@ $inner900-width: 400px;
 	box-sizing: border-box;
 
 	legend {
-		width: 420px;
+		max-width: 420px;
+		width: 100%;
 		font-size: 34px;
 		letter-spacing: 5px;
 		font-weight: 700;
@@ -240,3 +244,21 @@ $inner900-width: 400px;
 		}
 	}
 }
+
+@media (max-width: 480px) {
+	.container__block {
+		max-width: 310px;
+	}
+	.bordered-block {
+		max-width: 300px;
+		p {
+			max-width: 270px;
+		}
+	}
+
+	legend {
+		font-size: 32px !important;
+	}
+}
+
+

@@ -1,6 +1,6 @@
 .header {
 	width: 100%;
-	height: 100px;
+	height: 150px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -8,7 +8,13 @@
 	top: 0px;
 	z-index: 9999;
 
-	background-color: $clr_header_bg;
+	background: linear-gradient(
+		to bottom,
+		#ffff 0%,
+		#fff0 100%
+	);
+
+	// background-color: $clr_header_bg;
 
 	&__content {
 		display: flex;
@@ -25,6 +31,13 @@
 
 	&__navigation {
 		font-family: $font_main;
+	}
+
+	@media (max-width: 800px) {
+		height: 50px;
+		&__logo {
+			font-size: 30px;
+		}
 	}
 
 }

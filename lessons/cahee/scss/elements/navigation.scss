@@ -3,9 +3,13 @@
 	background-color: $clr_navigation_bg;
 
 	&__list {
+		display: flex;
+		flex-direction: row;
 		list-style: none;
 		text-align: right;
 		padding-left: 10px;
+		position: relative;
+		transition: all .5s ease-in;
 	}
 
 	&__item {
@@ -27,4 +31,71 @@
 		color: $clr_navigation_fg;
 		text-decoration: none;
 	}
+
+
+	// burger menu
+	&__check {
+		display: none;
+	}
+	&__line {
+		transition: all .5s ease-in;
+		width: 42px;
+		border-radius: 4px;
+		padding: 3px;
+		background-color: $clr_navigation_fg;
+		box-sizing: border-box;
+	}
+	&__label {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		visibility: hidden;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 48px;
+		height: 32px;
+	}
+	//check
+	&__check:checked + &__label {
+		.navigation__line:nth-of-type(1) {
+			transform: translate(0px, 13px) rotate(45deg);
+		}
+		.navigation__line:nth-of-type(2) {
+			transform: scale(0.0);
+		}
+		.navigation__line:nth-of-type(3) {
+			transform: translate(0px, -13px) rotate(-45deg);
+		}
+	}
+
+	&__check:checked ~ &__list {
+		right: 10px;
+		.navigation__item {
+			padding: 10px 30px;
+
+		}
+	}
+
+
+
+	// toogle visibility
+	@media (max-width: 800px) {
+		&__label {
+			visibility: visible;
+		}
+		&__list {
+			position: fixed;
+			top: 30px;
+			right: -100%;
+			flex-direction: column;
+		}
+		&__item {
+			font-size: 24px;
+			background-color: #fff6;
+			transition: all .5s ease-in;
+		}
+	}
+
 }
