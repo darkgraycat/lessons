@@ -232,7 +232,7 @@ html, body {
 	&__icons {
 		display: flex;
 		place-content: center center;
-		> * {
+		div {
 			display: flex;
 
 			justify-content: center;
