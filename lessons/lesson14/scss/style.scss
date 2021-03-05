@@ -6,6 +6,7 @@
 */
 
 $color_orange: #ffcc00;
+$color_text_lighter: #cccccc;
 $color_text_light: #898f8f;
 $color_text_medium: #666666;
 $color_text_dark: #333333;
@@ -18,7 +19,6 @@ ion-icon {
 	}
 }
 
-
 html, body {
 	width: 100%;
 	height: 100%;
@@ -29,8 +29,10 @@ html, body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
+	flex-wrap: wrap;
+
 	width: 100%;
-	height: 100%;
+	height: auto;
 	margin: 0 auto;
 	padding: 80px;
 
@@ -89,35 +91,55 @@ html, body {
 	}
 
 	&__vertical {
-		margin: 80px;
+		margin: 40px 80px;
 		width: 1px;
 		height: 560px;
 		background-color: $color_orange;
 	}
 
+	&__dots {
+		div {
+			display: inline-block;
+			border-radius: 50%;
+			border: 1px solid $color_orange;
+			margin: 4px;
+			width: 8px;
+			height: 8px;
+			&:nth-of-type(1),
+			&:nth-of-type(3) {
+				background-color: $color_orange;
+			}
+		}
+	}
 }
 
 .fancy-cornered {
+	width: 420px;
 
 	position: relative;
 	width: fit-content;
 	height: fit-content;
+	justify-self: flex-start;
 
 	&__content {
-		max-width: 400px;
-		max-height: 400px;
-		margin: 15px;
+		width: 420px;
+
+		// max-width: 400px;
+		// max-height: 400px;
+		// width: 100%;
+		// height: 100%;
 		border: 1px solid $color_orange;
 	}
 
 	&__corner {
 		position: absolute;
+		border: 1px solid $color_orange;
 		width: 100px;
 		height: 100px;
+		margin: -15px;
 	}
 
 	&__top-left {
-		border: 1px solid $color_orange;
 		border-right: none;
 		border-bottom: none;
 		top: 0px;
@@ -125,7 +147,6 @@ html, body {
 	}
 
 	&__top-right {
-		border: 1px solid $color_orange;
 		border-left: none;
 		border-bottom: none;
 		top: 0px;
@@ -133,7 +154,6 @@ html, body {
 	}
 	
 	&__bottom-left {
-		border: 1px solid $color_orange;
 		border-right: none;
 		border-top: none;
 		bottom: 0px;
@@ -141,7 +161,6 @@ html, body {
 	}
 
 	&__bottom-right {
-		border: 1px solid $color_orange;
 		border-left: none;
 		border-top: none;
 		bottom: 0px;
@@ -169,8 +188,6 @@ html, body {
 		justify-self: flex-start;
 		margin: 40px;
 		color: $color_orange;
-		font-size: 90px;
-
 	}
 
 	&__right {
@@ -181,6 +198,9 @@ html, body {
 }
 
 .fancy-text {
+	width: 420px;
+
+	justify-self: flex-end;
 	text-align: center;
 	
 	&__header {
@@ -199,34 +219,71 @@ html, body {
 	}
 
 	&__text {
-		width: 420px;
-		height: 121px;
+		max-width: 420px;
+		width: 100%;
 		font-size: 14px;
-		color: $color_text_dark;
+		line-height: 24px;
+		color: #333333;
 		font-weight: 500;
 		font-family: "Raleway";
+		text-align: center;
 	}
 
 	&__icons {
 		display: flex;
 		place-content: center center;
+		* {
+			color: $color_text_lighter;
+			border: 2px solid $color_text_lighter;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 30px;
+			height: 30px;
+			margin: 3px;
+			font-size: 16px;
+			&:hover {
+				color: $color_orange;
+				border-color: $color_orange;
+			}
+		}
 	}
 
 	&__button {
+		margin-top: 40px;
+		display: inline-block;
 		font-size: 14px;
 		color: $color_text_medium;
 		font-weight: 700;
 		font-family: "Open Sans";
 		border: 1px solid $color_orange;
+		padding: 8px 10px;
+		text-decoration: none;
+		&:hover {
+			color: $color_orange;
+		}
 	}
 
-
-
 	&__line {
-
+		margin: 0 auto;
+		height: 1px;
+		width: 100px;
+		background-color: $color_orange;
 	}
 
 	&__rects {
-
+		margin: 0 auto;
+		div {	
+			display: inline-block;
+			margin: 0 2.5px;
+			height: 4px;
+			background-color: $color_orange;
+			width: 20px;
+			&:nth-of-type(1),
+			&:nth-of-type(3) {
+				width: 10px;
+			}
+		}
 	}
 }
