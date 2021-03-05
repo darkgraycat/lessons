@@ -232,17 +232,17 @@ html, body {
 	&__icons {
 		display: flex;
 		place-content: center center;
-		* {
+		> * {
+			display: flex;
+
+			justify-content: center;
+			align-items: center;
 			color: $color_text_lighter;
 			border: 2px solid $color_text_lighter;
 			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
 			width: 30px;
 			height: 30px;
 			margin: 3px;
-			font-size: 16px;
 			&:hover {
 				color: $color_orange;
 				border-color: $color_orange;

@@ -207,19 +207,18 @@ html, body {
   display: flex;
   place-content: center center;
 }
-.fancy-text__icons * {
-  color: #cccccc;
-  border: 2px solid #cccccc;
-  border-radius: 50%;
+.fancy-text__icons > * {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #cccccc;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   margin: 3px;
-  font-size: 16px;
 }
-.fancy-text__icons *:hover {
+.fancy-text__icons > *:hover {
   color: #ffcc00;
   border-color: #ffcc00;
 }
