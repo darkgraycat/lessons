@@ -226,6 +226,17 @@ window.onload = e => {
 	// for lulz
 	// const isPerfect = n => (n == 6) || (n == 28) || (n == 496) || (n == 8128)
 
+	const convertToSeconds = (h, m, s) => h * 3600 + m * 60 + s
+	const convertSeconds = s => {
+		let hours = Math.floor(s / 3600 % 24)
+		let minutes = Math.floor(s / 60 % 60)
+		let seconds = s % 60
+		if (hours < 10) hours = `0${hours}`
+		if (minutes < 10) minutes = `0${minutes}`
+		if (seconds < 10) seconds = `0${seconds}`
+		return `${hours}:${minutes}:${seconds}`
+	}
+
 	tasks[20] = () => {
 		const sign = (a, b) => ((a < b) ? -1 : ((a == b) ? 0 : 1))
 		showResult(sign(...askNumbers('two numbers')))
@@ -261,6 +272,32 @@ window.onload = e => {
 		showResult(getPerfectNumbers(...askNumbers('two numbers')))
 	}
 
+	tasks[26] = () => {
+		const showTime = (h, m, s) => `${h}:${m}:${s || '00'}`
+		showResult(showTime(...askNumbers('two or three numbers')))
+	}
+
+	tasks[27] = () => {
+		showResult(convertToSeconds(...askNumbers('three numbers')))
+	}
+
+	tasks[28] = () => {
+		showResult(convertSeconds(...askNumbers('one number')))
+	}
+
+	tasks[29] = () => {
+		const getDeltaTime = (ha, ma, sa, hb, mb, sb) => {
+			let secondsA = convertToSeconds(ha, ma, sa)
+			let secondsB = convertToSeconds(hb, mb, sb)
+			if (secondsA > secondsB) {
+				secondsA = secondsA ^ secondsB
+				secondsB = secondsA ^ secondsB
+				secondsA = secondsA ^ secondsB
+			}
+			return convertSeconds(secondsB - secondsA)
+		}
+		showResult(getDeltaTime(...askNumbers('six! numbers')))
+	}
 
 	const buttons = document.getElementsByTagName('button')
 	for (let i = 0; i < buttons.length; i++) {
