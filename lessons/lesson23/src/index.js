@@ -2,7 +2,8 @@ window.onload = e => {
 
 	const taskNames = `Age Detector; Keyboard Symbol; Same Numbers; Leap Year; Palindrome; Currency; Discount; Rect and Circle Problem; Quiz; Next Date;
 		Ariphmetic Progression Summ; Same Divider; All Dividers; Digits Count; Number Filter; Calculator; Shifting Digits; Next Day; Multiply Table; Game;
-		-1 0 1; Factorial; Concat Numbers; Rectangle Calc; Perfect Number; Perfect Numbers; Time Convert; Return Seconds; Return Time String; Date Delta`.split(';')
+		-1 0 1; Factorial; Concat Numbers; Rectangle Calc; Perfect Number; Perfect Numbers;	 Time Convert; Return Seconds; Return Time String; Date Delta;
+		Create Rectangle; Rectangle Width; Rectangle Height; Rectangle Square; Rectangle Perimeter; Add Width; Add Height; Add Size; Translate Rectangle; Is Inside Rectangle`.split(';')
 	const tasks = []
 
 	tasks[0] = () => {
@@ -302,6 +303,121 @@ window.onload = e => {
 		}
 		showResult(getDeltaTime(...askNumbers('six! numbers')))
 	}
+
+	// Objects
+	const Rectangle = {
+		x1: 0, y1: 0,
+		x2: 0, y2: 0,
+
+		create(x1, y1, x2, y2) {
+			return Object.assign({}, this).modify(x1, y1, x2, y2)
+		},
+
+		modify(x1, y1, x2, y2) {
+			this.x1 = x1
+			this.y1 = y1
+			this.x2 = x2
+			this.y2 = y2
+			return this
+		},
+
+		toString() {
+			return `Points: ${this.x1}:${this.y1}, ${this.x2}:${this.y1}\nWidth, height: ${this.getWidth()}, ${this.getHeight()}`
+		},
+
+		getWidth() {
+			return Math.abs(this.x2 - this.x1)
+		},
+
+		getHeight() {
+			return Math.abs(this.y2 - this.y1)
+		},
+
+		getSquare() {
+			return this.getWidth() * this.getHeight()
+		},
+
+		getPerimeter() {
+			return (this.getWidth() + this.getHeight()) * 2
+		},
+
+		addWidth(n) {
+			this.x2 += n
+		},
+
+		addHeight(n) {
+			this.y2 += n
+		},
+
+		addSize(w, h) {
+			this.addWidth(w)
+			this.addHeight(h)
+		},
+
+		transtale(x, y) {
+			x = x || 0
+			y = y || 0
+			this.x1 += x
+			this.x2 += x
+			this.y1 += y
+			this.y2 += y
+		},
+
+		isInside(x, y) {
+			return (this.x1 <= x && x <= this.x2) && (this.y1 <= y && y <= this.y2)
+			// return (this.x1 < x && this.x2 > x) && (this.y1 < y && this.y2 > y)
+		}
+	}
+
+	let rect = Rectangle.create(0, 10, 20, 40)
+
+	tasks[30] = () => {
+		rect = Rectangle.create(...askNumbers('four numbers'))
+		alert(`Your rect is:\n${rect.toString()}`)
+	}
+
+	tasks[31] = () => {
+		alert(`Width: ${rect.getWidth()}`)
+	}
+
+	tasks[32] = () => {
+		alert(`Height: ${rect.getHeight()}`)
+	}
+
+	tasks[33] = () => {
+		alert(`Square: ${rect.getSquare()}`)
+	}
+
+	tasks[34] = () => {
+		alert(`Perimeter: ${rect.getPerimeter()}`)
+	}
+
+	tasks[35] = () => {
+		rect.addWidth(+prompt('New width'))
+		alert(rect.toString())
+	}
+
+	tasks[36] = () => {
+		rect.addHeight(+prompt('New height'))
+		alert(rect.toString())
+	}
+
+	tasks[37] = () => {
+		rect.addSize(...askNumbers('Enter width and height for rect'))
+		alert(rect.toString())
+	}
+
+	tasks[38] = () => {
+		rect.transtale(...askNumbers('Enter X and Y to translate'))
+		alert(rect.toString())
+	}
+
+	tasks[39] = () => {
+		alert(rect.isInside(...askNumbers('Enter dot coordinates')))
+	}
+
+
+
 
 	const buttons = document.getElementsByTagName('button')
 	for (let i = 0; i < buttons.length; i++) {
