@@ -224,10 +224,8 @@ window.onload = e => {
 		}
 		return result
 	}
-	const isPerfect = n => {
-		const dividers = getDividers(n)
-		return dividers.reduce((a, b) => a + b) == n
-	}
+
+	const isPerfect = n => getDividers(n).reduce((a, b) => a + b) == n
 
 	// for lulz
 	// const isPerfect = n => (n == 6) || (n == 28) || (n == 496) || (n == 8128)
