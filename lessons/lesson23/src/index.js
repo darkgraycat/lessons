@@ -107,8 +107,6 @@ window.onload = e => {
 		alert(newDate)
 	}
 
-	// 
-
 	tasks[10] = () => {
 		const numberStart = +prompt('Enter start number')
 		const numberEnd = +prompt('Enter end number')
@@ -116,7 +114,15 @@ window.onload = e => {
 	}
 
 	tasks[11] = () => {
+		const numberA = +prompt('Enter first number')
+		const numberB = +prompt('Enter second number')
+		const getSameBiggestDivider = (a, b) => (b) ? getSameBiggestDivider(b, a % b) : Math.abs(a)
+		alert(getSameBiggestDivider(numberA, numberB))
+	}
 
+	tasks[12] = () => {
+		const number = +prompt('Enter number')
+		alert(getDividers(number))
 	}
 
 	tasks[13] = () => {
