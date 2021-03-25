@@ -8,44 +8,89 @@
 	<script src="src/index.js"></script>
 	<title>Document</title>
 	<style>
+		html,
+		body {
+			height: 100%;
+		}
+
 		body {
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			flex-wrap: wrap;
 			gap: 20px;
 			background-color: #222;
+			margin: auto;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
 		}
 
 		button {
 			width: 300px;
+			height: 50px;
 			border: 0;
 			outline: 0;
-			color: #fff;
+			color: #222;
 			font-family: monospace;
-			font-size: 24px;
+			font-size: 20px;
 			background-color: #4f4;
+			border-radius: 5px;
+			box-sizing: border-box;
 		}
 
 		button:hover {
+			border: 4px solid #fff;
+			color: #fff;
+		}
+
+		button:active {
 			background-color: #f44;
+		}
+
+		.result-window {
+			width: 90%;
+			height: 200px;
+			font-family: monospace;
+			font-size: 16px;
+			color: #f44;
+			border: 2px solid #fff;
+			border-radius: 8px;
+			padding: 10px;
+			box-sizing: border-box;
 		}
 	</style>
 </head>
 
 <body>
-	<button>Task 1</button>
-	<button>Task 2</button>
-	<button>Task 3</button>
-	<button>Task 4</button>
-	<button>Task 5</button>
-	<button>Task 6</button>
-	<button>Task 7</button>
-	<button>Task 8</button>
-	<button>Task 9</button>
-	<button>Task 10</button>
-	<hr>
-	<button>Task 11</button>
+	<div>
+		<button>Task 1</button>
+		<button>Task 2</button>
+		<button>Task 3</button>
+		<button>Task 4</button>
+		<button>Task 5</button>
+		<button>Task 6</button>
+		<button>Task 7</button>
+		<button>Task 8</button>
+		<button>Task 9</button>
+		<button>Task 10</button>
+	</div>
+	<div>
+		<button>Task 11</button>
+		<button>Task 12</button>
+		<button>Task 13</button>
+		<button>Task 14</button>
+		<button>Task 15</button>
+		<button>Task 16</button>
+		<button>Task 17</button>
+		<button>Task 18</button>
+		<button>Task 19</button>
+		<button>Task 20</button>
+	</div>
+	<div class="result-window">Results</div>
 </body>
 
 </html>

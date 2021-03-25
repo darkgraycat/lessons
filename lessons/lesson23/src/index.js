@@ -1,5 +1,8 @@
 window.onload = e => {
 
+	const taskNames = `Age Detector; Keyboard Symbol; Same Numbers; Leap Year; Palindrome; Currency; Discount; Rect and Circle Problem; Quiz; Next Date;
+		Ariphmetic Progression Summ; Same Divider; All Dividers; Digits Count; Number Filter; Calculator; Shifting Digits; Next Day; Multiply Table; Game;
+		-1 0 1; Factorial; Concat Numbers; Rectangle Calc; Perfect Number; Perfect Numbers; Time Convert; Return Seconds; Return Time String; Date Delta`.split(';')
 	const tasks = []
 	tasks[0] = () => {
 		const age = +prompt('Print your age')
@@ -106,14 +109,107 @@ window.onload = e => {
 	// 
 
 	tasks[10] = () => {
+		const numberStart = +prompt('Enter start number')
+		const numberEnd = +prompt('Enter end number')
+		alert(numberStart + numberEnd * (numberEnd - numberStart) / 2)
+	}
+
+	tasks[11] = () => {
 
 	}
 
+	tasks[13] = () => {
+		let input = prompt('Enter number')
+		alert(input.length)
+	}
 
+	tasks[14] = () => {
+		let positive = 0
+		let negative = 0
+		let even = 0
+		let odd = 0
+		let zero = 0
+		for (let i = 0; i < 10; i++) {
+			const input = +prompt(`${i + 1} Type number`)
+			if (input > 0) {
+				positive++
+			} else if (input < 0) {
+				negative--
+			} else zero++
+			if (input % 2) {
+				even++
+			} else odd++
+		}
+		alert(`Positive:${positive}\nNegative:${negative}\nEven:${even}\nOdd:${odd}\nZero:${zero}`)
+	}
+
+	tasks[15] = () => {
+		while (true) {
+			const num_a = +prompt('Enter first number')
+			const num_b = +prompt('Enter second number')
+			const sign = prompt('Enter operator')
+			alert(eval(num_a + sign + num_b))
+			if (!confirm('Another calculation?')) return
+		}
+	}
+
+	tasks[16] = () => {
+		const number = prompt('Enter number')
+		const digit = +prompt('Enter digit')
+		const result = number.substring(digit) + number.substring(0, digit)
+		alert(result)
+	}
+
+	tasks[17] = () => {
+		const days = 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'.split(' ')
+		let i = 0
+		while (true) {
+			i = i % days.length
+			if (!confirm(days[i++])) return
+		}
+	}
+
+	tasks[18] = () => {
+		let result = ''
+		for (let number = 2; number <= 9; number++) {
+			result += number + ':: '
+			for (let mult = 1; mult <= 10; mult++) {
+				result += number * mult + '   '
+			}
+			result += '\n'
+		}
+		alert(result)
+	}
+
+	tasks[19] = () => {
+		let from = 0
+		let to = 100
+		let number = to
+
+		alert(`Mind a number from ${from} - ${to}`)
+
+		while (true) {
+			number = Math.floor((from + to) / 2)
+			if (confirm(`Is equal = to ${number}`)) {
+				alert('Well Done')
+				return
+			}
+			if (confirm(`Is less < than ${number}`)) {
+				to = number - 1
+				continue
+			}
+			if (confirm(`Is greater > than ${number}`)) {
+				from = number + 1
+				continue
+			}
+		}
+	}
 
 
 	const buttons = document.getElementsByTagName('button')
 	for (i in buttons) {
+		buttons[i].innerHTML = taskNames[i]
 		buttons[i].onclick = tasks[i]
 	}
+
 }
