@@ -4,6 +4,7 @@ window.onload = e => {
 		Ariphmetic Progression Summ; Same Divider; All Dividers; Digits Count; Number Filter; Calculator; Shifting Digits; Next Day; Multiply Table; Game;
 		-1 0 1; Factorial; Concat Numbers; Rectangle Calc; Perfect Number; Perfect Numbers; Time Convert; Return Seconds; Return Time String; Date Delta`.split(';')
 	const tasks = []
+
 	tasks[0] = () => {
 		const age = +prompt('Print your age')
 		let msg = ''
@@ -205,11 +206,65 @@ window.onload = e => {
 		}
 	}
 
+	// misc functions
+	const askNumbers = message => prompt('Enter comma-separated data: ' + message).split(',').map((value) => parseFloat(value))
+	const showResult = message => alert('Result is: ' + message)
+	const printResult = message => document.querySelector('#result').innerHTML = message
 
-	const buttons = document.getElementsByTagName('button')
-	for (i in buttons) {
-		buttons[i].innerHTML = taskNames[i]
-		buttons[i].onclick = tasks[i]
+	const getDividers = n => {
+		result = [1]
+		for (let i = 2; i < n; i++) {
+			if (n % i == 0) result.push(i)
+		}
+		return result
+	}
+	const isPerfect = n => {
+		const dividers = getDividers(n)
+		return dividers.reduce((a, b) => a + b) == n
 	}
 
+	// for lulz
+	// const isPerfect = n => (n == 6) || (n == 28) || (n == 496) || (n == 8128)
+
+	tasks[20] = () => {
+		const sign = (a, b) => ((a < b) ? -1 : ((a == b) ? 0 : 1))
+		showResult(sign(...askNumbers('two numbers')))
+	}
+
+	tasks[21] = () => {
+		const factorial = n => (n != 1) ? n * factorial(n - 1) : 1
+		showResult(factorial(...askNumbers('one number')))
+	}
+
+	tasks[22] = () => {
+		const concat = (a, b, c) => a * 100 + b * 10 + c
+		showResult(concat(...askNumbers('three numbers')))
+	}
+
+	tasks[23] = () => {
+		const rectSquare = (a, b) => a * (b || a)
+		showResult(rectSquare(...askNumbers('one or two numbers')))
+	}
+
+	tasks[24] = () => {
+		showResult(isPerfect(...askNumbers('one number')))
+	}
+
+	tasks[25] = () => {
+		const getPerfectNumbers = (start, end) => {
+			const result = []
+			for (let i = start; i <= end; i++) {
+				if (isPerfect(i)) result.push(i)
+			}
+			return result
+		}
+		showResult(getPerfectNumbers(...askNumbers('two numbers')))
+	}
+
+
+	const buttons = document.getElementsByTagName('button')
+	for (let i = 0; i < buttons.length; i++) {
+		buttons[i].onclick = tasks[i]
+		buttons[i].innerHTML = taskNames[i]
+	}
 }
