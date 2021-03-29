@@ -1,10 +1,22 @@
+/*
+	I decide to keep all simple lessons in one js file
+	see https://darkgraycat.github.io/lessons/lessons/lesson23/index.html
+*/
+
+
 window.onload = e => {
 
 	const taskNames = `Age Detector; Keyboard Symbol; Same Numbers; Leap Year; Palindrome; Currency; Discount; Rect and Circle Problem; Quiz; Next Date;
 		Ariphmetic Progression Summ; Same Divider; All Dividers; Digits Count; Number Filter; Calculator; Shifting Digits; Next Day; Multiply Table; Game;
 		-1 0 1; Factorial; Concat Numbers; Rectangle Calc; Perfect Number; Perfect Numbers;	 Time Convert; Return Seconds; Return Time String; Date Delta;
-		Create Rectangle; Rectangle Width; Rectangle Height; Rectangle Square; Rectangle Perimeter; Add Width; Add Height; Add Size; Translate Rectangle; Is Inside Rectangle`.split(';')
+		Create Rectangle; Rectangle Width; Rectangle Height; Rectangle Square; Rectangle Perimeter; Add Width; Add Height; Add Size; Translate Rectangle; Is Inside Rectangle;
+		The Auto Object; The FractionalNumber Object; The Time Object`.split(';')
 	const tasks = []
+
+
+	/*
+		LESSON 23
+	*/
 
 	tasks[0] = () => {
 		const age = +prompt('Print your age')
@@ -107,6 +119,10 @@ window.onload = e => {
 		newDate.setDate(date.getDate() + 1)
 		alert(newDate)
 	}
+
+	/*
+		LESSON 24
+	*/
 
 	tasks[10] = () => {
 		const numberStart = +prompt('Enter start number')
@@ -213,6 +229,10 @@ window.onload = e => {
 		}
 	}
 
+	/*
+		LESSON 25
+	*/
+
 	// misc functions
 	const askNumbers = message => prompt('Enter comma-separated data: ' + message).split(',').map((value) => parseFloat(value))
 	const showResult = message => alert('Result is: ' + message)
@@ -304,6 +324,9 @@ window.onload = e => {
 		showResult(getDeltaTime(...askNumbers('six! numbers')))
 	}
 
+	/*
+		LESSON 26
+	*/
 	// Objects
 	const Rectangle = {
 		x1: 0, y1: 0,
@@ -414,6 +437,73 @@ window.onload = e => {
 
 	tasks[39] = () => {
 		alert(rect.isInside(...askNumbers('Enter dot coordinates')))
+	}
+
+	/*
+		LESSON 26-ba tasks
+	*/
+
+	tasks[40] = () => {
+
+		class Auto {
+			constructor(vendor, model, year, speed) {
+				this.vendor = vendor
+				this.model = model
+				this.year = year
+				this.speed = speed
+			}
+
+			toString() {
+				return `${this.year} ${this.model} ${this.vendor} with ${this.speed}mph average speed`
+			}
+
+			getRequiredTime(distance) {
+				const time = distance / this.speed
+				const rest = Math.floor(time / 4)
+				return time + rest
+			}
+		}
+
+		const calcTime = auto => ''
+			+ `100miles: ${auto.getRequiredTime(100).toFixed(2)} hours\n`
+			+ `200miles: ${auto.getRequiredTime(200).toFixed(2)} hours\n`
+			+ `300miles: ${auto.getRequiredTime(300).toFixed(2)} hours\n`
+			+ `400miles: ${auto.getRequiredTime(400).toFixed(2)} hours\n`
+
+		const auto1 = new Auto('Toyota', 'Supra', 2004, 200)
+		const auto2 = new Auto('Nissan', '350Z', 2008, 300)
+		const auto3 = new Auto(...'VAZ 2101'.split(' '), 1980, 50)	//helpfull with tonn of string arguments=)
+
+		alert(`We have ${auto1.toString()} \nand test it:\n ${calcTime(auto1)}`)
+		alert(`We have ${auto2.toString()} \nand test it:\n ${calcTime(auto2)}`)
+		alert(`We have ${auto3.toString()} \nand test it:\n ${calcTime(auto3)}`)
+	}
+
+	tasks[41] = () => {
+		class FractionalNumber {
+			constructor(numerator, denominator) {
+				this.numerator = numerator
+				this.denominator = denominator
+			}
+
+			toString() { return this.numerator + '/' + this.denominator }
+			valueOf() { return this.numerator / this.denominator }
+
+			add(fracNumber) {
+
+			}
+
+			setDenominator(denom) {
+
+			}
+
+		}
+
+		const num1 = new FractionalNumber(2, 3)
+		const num2 = new FractionalNumber(2, 6)
+
+		const result = num1.add(num2)
+		alert(result)
 	}
 
 
