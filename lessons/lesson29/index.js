@@ -54,5 +54,5 @@ const addProgress = () => {
 		progress = 100
 		bar.innerHTML = 'Loaded!'
 	}
-	bar.style.width = progress + '%'
+	bar.style.width = `${progress}%`
 }
