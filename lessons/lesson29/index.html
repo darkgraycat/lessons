@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="index.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<div class="trafficLight">
+		<div class="light red active"></div>
+		<div class="light yellow"></div>
+		<div class="light green"></div>
+
+		<button onclick="switchLight()">switch</button>
+	</div>
+
+	<div>
+		<button onclick="toggleText()">show text</button>
+		<div class="text">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus enim numquam veritatis natus
+			dignissimos, temporibus minus nostrum, nisi nemo est corporis laborum consequuntur sequi reiciendis sed, ad
+			laudantium neque illo?
+		</div>
+	</div>
+
+	<div class="tabed-block">
+		<div class="tabs">
+			<button onclick="switchTab(1)" class="tabs__tab active">Tab 1</button>
+			<button onclick="switchTab(2)" class="tabs__tab">Tab 2</button>
+			<button onclick="switchTab(3)" class="tabs__tab">Tab 3</button>
+		</div>
+		<div class="content">
+			<div class="content__item active">
+				Tab 1 content Tab 1 content Tab 1 content Tab 1 content
+				Tab 1 content Tab 1 content Tab 1 content Tab 1 content
+				Tab 1 content Tab 1 content Tab 1 content Tab 1 content
+				Tab 1 content Tab 1 content Tab 1 content Tab 1 content
+			</div>
+			<div class="content__item">
+				Tab 2 content Tab 2 content Tab 2 content Tab 2 content
+				Tab 2 content Tab 2 content Tab 2 content Tab 2 content
+				Tab 2 content Tab 2 content Tab 2 content Tab 2 content
+			</div>
+			<div class="content__item">
+				Tab 3 content Tab 3 content Tab 3 content Tab 3 content
+				Tab 3 content Tab 3 content Tab 3 content Tab 3 content
+			</div>
+		</div>
+	</div>
+
+	<div class="progress-bar">
+		<div class="progress-bar__bar">
+			<div class="progress-bar__completed"></div>
+		</div>
+		<button class="progress-bar__button">load</button>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+/*  */
+.trafficLight {
+	background: #444;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 140px;
+	height: 400px;
+	gap: 10px;
+	border-radius: 20px;
+}
+
+.trafficLight button {
+	background: #444;
+	color: white;
+	font-size: 16px;
+	font-family: monospace;
+	border: 2px solid white;
+	outline: 0;
+}
+
+.light {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	background: #555;
+}
+
+.red.active {
+	background: #f44;
+}
+
+.yellow.active {
+	background: #ff4;
+}
+
+.green.active {
+	background: #4f4;
+}
+
+
+
+
+
+/*  */
+.hide {
+	/* display: none; */
+	visibility: hidden;
+}
+
+
+
+
+.tabed-block {
+	display: flex;
+	flex-direction: row;
+	border: 4px solid black;
+	gap: 10px;
+	font-family: monospace;
+}
+
+.tabs {
+	display: flex;
+	flex-direction: column;
+	justify-self: left;
+	background-color: black;
+	color: white;
+	border-right: 4px solid black;
+}
+
+.tabs__tab {
+	outline: 0;
+	border: 0;
+	background: #888;
+	color: #000;
+	cursor: pointer;
+	width: 100px;
+	height: 40px;
+	font-size: 16px;
+	font-family: monospace;
+}
+.tabs__tab.active { background: #4f4; }
+
+.content {
+	justify-self: right;
+	padding: 10px;
+}
+.content__item { display: none; }
+.content__item.active { display: block; }
+
+
+/*  */
+
+
+.progress-bar {
+
+}
+
