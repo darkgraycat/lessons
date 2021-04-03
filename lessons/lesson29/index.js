@@ -44,3 +44,15 @@ const switchTab = n => {
 	items[n - 1].classList.add('active')
 }
 
+// 
+
+const addProgress = () => {
+	const bar = document.querySelector('.progress-bar__status')
+	let progress = Number.parseInt(bar.style.width) || 0
+	progress += 10
+	if (progress >= 100) {
+		progress = 100
+		bar.innerHTML = 'Loaded!'
+	}
+	bar.style.width = progress + '%'
+}
