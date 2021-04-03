@@ -82,6 +82,9 @@ li::marker {
 .bordered__title::before { left: 0px; }
 .bordered__title::after { right: 0px; } */
 
+.highlight {
+	color: #f44;
+}
 
 .homeworks {
 	display: flex;
