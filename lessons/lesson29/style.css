@@ -1,3 +1,48 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	background: rgba(0, 0, 0, .8);
+}
+
+.modal__content {
+	margin: 80px auto;
+	width: 400px;
+	height: 200px;
+	background: white;
+	text-align: center;
+}
+
+.modal__text {
+	padding-top: 60px;
+	display: block;
+}
+
+.modal__close {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border: 2px solid black;
+	cursor: pointer;
+	text-align: center;
+	float: right;
+	margin: 10px;
+}
+
+.modal__close::before {
+	content: 'X';
+	font-size: 20px;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.modal__close:hover { color: red; }
+
+
+
 /*  */
 
 .trafficLight {
@@ -46,9 +91,10 @@
 
 /*  */
 .hide {
-	/* display: none; */
-	visibility: hidden;
+	display: none;
+	/* visibility: hidden; */
 }
+
 
 /*  */
 

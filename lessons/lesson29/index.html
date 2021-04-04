@@ -12,6 +12,20 @@
 
 <body>
 
+	<h2>Modal window ex</h2>
+	<button onclick="openModal()">Open</button>
+	<div class="modal hide">
+		<div class="modal__content">
+			<div onclick="closeModal()" class="modal__close"></div>
+			<div class="modal__text">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, magnam? Autem illum in enim eum
+				quae.
+				Reprehenderit consequuntur exercitationem ipsa hic architecto sint aspernatur officia provident, vel
+				officiis culpa corrupti.
+			</div>
+		</div>
+	</div>
+
 	<h2>Traffic light ex</h2>
 	<hr>
 
@@ -66,10 +80,10 @@
 	<h2>Progress bar ex</h2>
 	<hr>
 
+	<button onclick="addProgress()">load</button>
 	<div class="progress-bar">
 		<div class="progress-bar__status"></div>
 	</div>
-	<button onclick="addProgress()">load</button>
 
 </body>
 

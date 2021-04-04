@@ -1,3 +1,12 @@
+const openModal = () => {
+	document.querySelector('.modal').classList.remove('hide')
+}
+
+const closeModal = () => {
+	document.querySelector('.modal').classList.add('hide')
+}
+
+
 
 const switchLight = (() => {
 	let direction = 1
