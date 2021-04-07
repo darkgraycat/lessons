@@ -39,6 +39,17 @@ html, body {
 .likes button:hover { box-shadow: 0px 0px 8px #8ba868 }
 .likes button:active {background: #e6aba3;}
 
+/*  */
+
+.todo-list ul {
+  list-style: none;
+}
+
+.todo-list ul>li {
+}
+
+
+
 
 .text-editor div,
 .text-editor textarea {
@@ -61,6 +72,9 @@ html, body {
   text-shadow: 0px 0px 4px #111;
 }
 
+.blocked {
+  user-select: none;
+}
 
 .highlight {
   background-color: #fd8;

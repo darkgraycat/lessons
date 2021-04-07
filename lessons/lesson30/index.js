@@ -13,7 +13,72 @@ window.onload = () => {
   window.likeDislike = likeDislike
 
 
+  // Blocked
+  $$('.blocked').forEach(elem => elem.addEventListener('contextmenu', e => {
+    e.preventDefault()
+  }))
 
+
+  // TODO list
+  $$('.todo-list__add').forEach(btn => btn.addEventListener('click', ({ target }) => {
+    const input = target.parentElement.querySelector('.todo-list__new-task')
+    const listActive = target.parentElement.querySelector('.todo-list__active-list')
+    const listDone = target.parentElement.querySelector('.todo-list__done-list')
+
+    if (input.value.length === 0) return -1, alert('Type something!')
+    const li = document.createElement('li')
+    const check = document.createElement('button')
+    const text = document.createElement('input')
+    const edit = document.createElement('button')
+    const remove = document.createElement('button')
+
+    li.appendChild(check)
+    li.appendChild(text)
+    li.appendChild(edit)
+    li.appendChild(remove)
+    listActive.appendChild(li)
+
+    li.classList.add('todo-list__task')
+    check.type = 'checkbox'
+    text.type = 'text'
+    text.readOnly = true
+
+    text.value = input.value
+    input.value = ''
+
+    const SAVE_ICON = '💾'
+    const EDIT_ICON = '🔨'
+    const ACTIVE_ICON = '☐'
+    const DONE_ICON = '☑'
+
+    check.innerHTML = ACTIVE_ICON
+    check.onclick = () => {
+      if (check.innerHTML == ACTIVE_ICON) {
+        check.innerHTML = DONE_ICON
+        listDone.appendChild(li)
+      } else {
+        check.innerHTML = ACTIVE_ICON
+        listActive.appendChild(li)
+      }
+    }
+
+    edit.innerHTML = EDIT_ICON
+    edit.onclick = () => {
+      if (edit.innerHTML == EDIT_ICON) {
+        text.readOnly = false
+        edit.innerHTML = SAVE_ICON
+      } else {
+        text.readOnly = true
+        edit.innerHTML = EDIT_ICON
+      }
+    }
+
+    remove.innerHTML = '❌'
+    remove.onclick = () => {
+      li.remove()
+    }
+
+  }))
 
   // 
 
