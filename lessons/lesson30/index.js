@@ -6,12 +6,9 @@ window.onload = () => {
 
 
   // Likes
+  const likeDislike = button => button.querySelector('*').innerHTML++
 
-  const likeDislike = b => {
-    const counter = b.querySelector('*')
-    counter.innerHTML = parseInt(counter.innerHTML) + 1
-  }
-
+  $('#anotherCounter').addEventListener('click', e => likeDislike(e.target))
   //export
   window.likeDislike = likeDislike
 
