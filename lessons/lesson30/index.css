@@ -45,9 +45,9 @@ html, body {
   height: 0px;
   border-left: 20px solid transparent;  
   border-bottom: 20px solid #fff;
-  margin: -1px;
-  background-color: #333;
-  outline: 2px solid #111;
+  margin: -2px;
+  background-color: #cbeba4;
+  outline: 2px solid #8ba868;
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -56,13 +56,13 @@ html, body {
 
 .resizable {
   display: block;
-  outline: 4px solid black;
-  border: 4px solid #fff;
+  /* outline: 4px solid black; */
+  /* border: 4px solid #fff; */
   width: 400px;
   height: 200px;
   padding: 4px;
-  background: #222;
-  color: #fff;
+  background: #bae285;
+  color: #000;
   box-sizing: border-box;
   word-wrap: break-word;
   overflow: hidden;
