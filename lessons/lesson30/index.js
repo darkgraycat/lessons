@@ -5,7 +5,20 @@ window.onload = () => {
   const $$ = query => document.querySelectorAll(query)
 
 
+  // Likes
 
+  const likeDislike = b => {
+    const counter = b.querySelector('*')
+    counter.innerHTML = parseInt(counter.innerHTML) + 1
+  }
+
+  //export
+  window.likeDislike = likeDislike
+
+
+
+
+  // 
 
   document.addEventListener('keydown', e => {
 

@@ -12,6 +12,12 @@
 
 <body>
 
+  <h2>Likes ex</h2>
+  <div class="likes">
+    <button onclick="likeDislike(this)">❤ Like<b>0</b></button>
+    <button onclick="likeDislike(this)">✘ Dislike<b>0</b></button>
+  </div>
+
   <h2>Text editor ex</h2>
   <div class="text-editor" id="editor">
     <div>Press CTRL+E to edit</div>
@@ -93,13 +99,12 @@
     <div class="resizer"></div>
   </div>
 
-
   <h2>This is just sub recursion</h2>
   <div id="recursive-subs">)</div>
 
 
-
-  <div class="end" onclick="document.querySelectorAll('*').forEach(el => el.classList.toggle('mb'))">
+  <!-- dont remove hidden -->
+  <div class="end hidden" onclick="document.querySelectorAll('*').forEach(el => el.classList.toggle('mb'))">
     if you click me - i will click your eyes
   </div>
 </body>

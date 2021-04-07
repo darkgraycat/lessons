@@ -4,6 +4,37 @@ html, body {
   padding: 0;
 }
   
+.likes button {
+  min-width: 120px;
+  height: 40px;
+  text-align: center;
+  background: #bae285;
+  font-weight: bold;
+  border: 0;
+  outline: 0;
+  color: white;
+  border-radius: 4px;
+  margin: 10px;
+  border: 2px solid #8ba868;
+  border-radius: 4px;
+  border-top: 0;
+  border-left: 0;
+}
+.likes button>* {
+  color: #bae285;
+  width: 30px;
+  background: white;
+  float: right;
+  padding: 2px;
+  border: 2px solid #8ba868;
+  border-radius: 4px;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.likes button:hover { box-shadow: 0px 0px 8px #8ba868 }
+.likes button:active {background: #e6aba3;}
+
 
 .text-editor div,
 .text-editor textarea {
