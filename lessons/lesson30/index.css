@@ -1,0 +1,29 @@
+.text-editor div,
+.text-editor textarea {
+  resize: none; 
+  outline: 4px solid black;
+  border: 4px solid #fff;
+  width: 400px;
+  height: 200px;
+  padding: 4px;
+  background: #222;
+  color: #fff;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.hidden {
+  display: none;
+}
+
+.name-table th {
+  cursor: pointer;
+}
+
+.name-table td {
+  border: 1px dotted black;
+}
+
+.name-table td:nth-child(2) {
+  background-color: red;
+}
