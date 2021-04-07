@@ -1,5 +1,5 @@
 html, body {
-  height: 200vh;
+  height: 300vh;
 }
 
 .text-editor div,
@@ -67,4 +67,9 @@ html, body {
   word-wrap: break-word;
   overflow: hidden;
   position: relative;
+}
+
+
+#recursive-subs {
+  font-size: 100px;
 }

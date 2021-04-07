@@ -92,4 +92,15 @@ window.onload = () => {
 
   $$('.resizer').forEach(el => el.addEventListener('mousedown', startResize, false))
 
+
+
+  const createSub = (el, left) => {
+    const sub = document.createElement('sub')
+    sub.innerHTML = el.innerHTML
+    el.appendChild(sub)
+    if (left--) createSub(sub, left)
+  }
+
+  createSub($('#recursive-subs'), 20)
+
 }
