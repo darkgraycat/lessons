@@ -3,11 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
-.make-blind {
-  color: transparent;
-  text-shadow: 0px 0px 4px #111;
-}
+  
 
 .text-editor div,
 .text-editor textarea {
@@ -25,7 +21,11 @@ html, body {
 
 .hidden {
   display: none;
+}.mb{/*joke class*/
+  color: transparent;
+  text-shadow: 0px 0px 4px #111;
 }
+
 
 .highlight {
   background-color: #fd8;
