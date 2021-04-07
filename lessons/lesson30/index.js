@@ -15,15 +15,16 @@ window.onload = () => {
 
     if (ctrl_e || ctrl_s) {
       e.preventDefault()
-      const div = document.querySelector('.text-editor div')
-      const txt = document.querySelector('.text-editor textarea')
+      const div = $('.text-editor div')
+      const txt = $('.text-editor textarea')
       if (ctrl_e) {
         div.classList.add('hidden')
         txt.classList.remove('hidden')
+        txt.focus()
       } else if (ctrl_s) {
         div.classList.remove('hidden')
         txt.classList.add('hidden')
-        div.innerHTML = txt.innerHTML
+        div.innerHTML = txt.value
       }
 
     }
@@ -67,10 +68,28 @@ window.onload = () => {
     $('.name-table').append(...sortedRows)
   }))
 
+  // 
 
 
+  let el
 
+  const startResize = e => {
+    el = e.target.parentElement
+    window.addEventListener('mousemove', resize, false)
+    window.addEventListener('mouseup', stopResize, false)
+  }
 
+  const resize = e => {
+    e.preventDefault()
+    el.style.width = (e.pageX - el.offsetLeft) + 'px';
+    el.style.height = (e.pageY - el.offsetTop) + 'px';
+  }
 
+  const stopResize = e => {
+    window.removeEventListener('mousemove', resize, false)
+    window.removeEventListener('mouseup', stopResize, false)
+  }
+
+  $$('.resizer').forEach(el => el.addEventListener('mousedown', startResize, false))
 
 }
