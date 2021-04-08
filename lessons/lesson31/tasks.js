@@ -48,7 +48,7 @@ const getSortedTasks = tasks => {
 const limitByTime = (tasks, time) => {
   const result = []
   tasks.forEach(task => {
-    if (task.time < time) {
+    if (task.time <= time) {
       time -= task.time
       result.push(task)
     }
@@ -56,11 +56,19 @@ const limitByTime = (tasks, time) => {
   return result
 }
 
-const calcValue = tasks => {
+const calcValues = tasks => {
   let result = 0
   tasks.forEach(task => result += task.value)
   return result
 }
+
+
+const calcEfficiences = tasks => {
+  let result = 0
+  tasks.forEach(task => result += task.efficiency)
+  return result
+}
+
 
 const printTasks = tasks => {
   for (task of tasks) {
@@ -80,8 +88,7 @@ const getMaxEfficiencyByTime1 = (tasks, time) => {
   allCombinations.forEach(comb => limitedCombinations.push(limitByTime(comb, time)))
 
   limitedCombinations.sort((a, b) => {
-    // console.log(calcValue(b), calcValue(a));
-    calcValue(b) - calcValue(a)
+    return calcValues(b) - calcValues(a)
   })
 
   // best combination
@@ -151,31 +158,28 @@ function permut8(arr, prepend) {
 //=======================================================
 //=======================================================
 
-// const time = 10
-// const tasks = createRandomTasks(3)
+const time = 10
+const tasks = createRandomTasks(8)
 
-const time = 4
-const tasks = [
-  //      Val Time    Eff
-  new Task(10, 3),//  3.3   №1  0.3
-  new Task(6, 2), //  3.0   №2  0.333
-  new Task(5, 2), //  2.5   №3  0.4
-  new Task(3, 1), //  3.0   №4  0.3333
-  new Task(2, 1)  //  2.0   №5  0.5
-]
+// const time = 4
+// const tasks = [
+//   //      Val Time    Eff
+//   new Task(10, 3),//  3.3   №1  0.3
+//   new Task(6, 2), //  3.0   №2  0.333
+//   new Task(5, 2), //  2.5   №3  0.4
+//   new Task(3, 1), //  3.0   №4  0.3333
+//   new Task(2, 1)  //  2.0   №5  0.5
+// ]
 
 
 
-console.log('start');
+// console.log('start');
 printTasks(tasks)
 
-console.log('total value');
-console.log(calcValue(tasks));
+console.log('total values:', calcValues(tasks));
 
 const tasksAnton = getMaxEfficiencyByTime1(tasks, time)
 const tasksAndrey = getMaxEfficiencyByTime2(tasks, time)
 
-
-
-console.log(calcValue(tasksAnton))
-console.log(calcValue(tasksAndrey))
+console.log('by Anton:', calcValues(tasksAnton))
+console.log('by Andrey:', calcValues(tasksAndrey))
