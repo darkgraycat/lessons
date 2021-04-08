@@ -176,6 +176,6 @@ window.onload = () => {
     if (left--) createSub(sub, left)
   }
 
-  createSub($('#recursive-subs'), 20)
+  $$('.recursive').forEach(el => createSub(el, 20))
 
 }
