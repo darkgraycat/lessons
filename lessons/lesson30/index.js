@@ -25,7 +25,7 @@ window.onload = () => {
     const listActive = target.parentElement.querySelector('.todo-list__active-list')
     const listDone = target.parentElement.querySelector('.todo-list__done-list')
 
-    if (input.value.length === 0) return -1, alert('Type something!')
+    if (input.value.length === 0) return alert('Type something!'), -1
     const li = document.createElement('li')
     const check = document.createElement('button')
     const text = document.createElement('input')
