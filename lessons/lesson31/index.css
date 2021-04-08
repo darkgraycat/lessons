@@ -27,7 +27,23 @@
 .icon-tooltip:before { content: "\e903"; }
 
 
-body {
-  font-family: Lato, sans-serif;
-  color: yellow;
+/* 
+  <div class="score-circle" colorset='red gray'>33</div>
+ */
+.score-circle {
+  /* must have */
+  width: 200px;
+  height: 200px;
+  outline: 0;
+
+  /* available */
+  border-radius: 50%;
+  background-color: #8f8;
+  border: 4px solid #88f;
+
+  /* for text only */
+  font-size: 60px;
+  text-align: center;
+  color: #fff;
 }
+
