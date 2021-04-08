@@ -44,13 +44,17 @@ html, body {
   width: fit-content;
 }
 
+.todo-list input {
+  outline: 0;
+}
+
 .todo-list ul {
   list-style: none;
   padding-left: 0;
 }
 
 .todo-list ul>li {
-  border: 2px solid #8ba868;
+  border: 2px solid #a0a0a0;
   border-radius: 8px;
   border-top: 0;
   border-left: 0;
@@ -71,6 +75,15 @@ html, body {
   color: #8ba868;
 }
 
+
+.todo-list__done-list>li {
+  background-color: #f3a38e !important;
+}
+.todo-list__done-list>li>button {
+  color: #d1826e !important;
+}
+
+
 .todo-list ul>li>button:first-child {
   font-size: xx-large;
   /* position: absolute; */
@@ -90,24 +103,28 @@ html, body {
   background: white;
   text-align: center;
   padding: 4px;
-  border: 2px solid #8ba868;
+  border: 2px solid #a0a0a0;
   text-shadow: 1px 1px 1px #8ba868;
   border-radius: 4px;
   border-bottom: 0;
   border-right: 0;
 }
 
+
 .todo-list__active-list::before { content: 'Active tasks' }
 .todo-list__done-list::before { content: 'Completed tasks' }
 .todo-list__active-list::before,
 .todo-list__done-list::before {
   display: block;
-  margin: -5px auto;
+  color: #fff;
+  background-color: #ddd;
+  border-radius: 8px;
+  font-family: monospace;
   text-align: center;
-  color: #cbeba4;
-  text-shadow: 1px 1px 0px #8ba868;
   font-size: x-large;
 }
+
+
 
 
 

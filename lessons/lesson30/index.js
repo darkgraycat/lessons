@@ -40,12 +40,12 @@ window.onload = () => {
 
     text.type = 'text'
     text.readOnly = true
-
     text.value = input.value
     input.value = ''
 
     const SAVE_ICON = '💾'
     const EDIT_ICON = '🔨'
+    const REMOVE_ICON = '❌'
     // const ACTIVE_ICON = '✘'
     // const ACTIVE_ICON = '⠀'
     // const DONE_ICON = '✔'
@@ -75,10 +75,8 @@ window.onload = () => {
       }
     }
 
-    remove.innerHTML = '❌'
-    remove.onclick = () => {
-      li.remove()
-    }
+    remove.innerHTML = REMOVE_ICON
+    remove.onclick = () => confirm('Delete task?') ? li.remove() : 0
 
   }))
 
