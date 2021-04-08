@@ -25,3 +25,9 @@
 .icon-card:before { content: "\e901"; }
 .icon-star:before { content: "\e902"; }
 .icon-tooltip:before { content: "\e903"; }
+
+
+body {
+  font-family: Lato, sans-serif;
+  color: yellow;
+}
