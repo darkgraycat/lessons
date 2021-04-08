@@ -40,16 +40,78 @@ html, body {
 .likes button:active {background: #e6aba3;}
 
 /*  */
+.todo-list {
+  width: fit-content;
+}
 
 .todo-list ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .todo-list ul>li {
+  border: 2px solid #8ba868;
+  border-radius: 8px;
+  border-top: 0;
+  border-left: 0;
+  background-color: #bae285;
+  margin: 2px;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list ul>li>button, .todo-list__add {
+  border: 0;
+  outline: 0;
+  background: 0;
+  font-size: larger;
+  margin-left: 4px;
+  color: #8ba868;
+}
+
+.todo-list ul>li>button:first-child {
+  font-size: xx-large;
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: -25%; */
+  margin: -20px 0px;
+  /* color: #bae285; */
+  /* text-shadow: 0px 2px 1px #8ba868; */
+  /* overflow:visible; */
+}
+
+.todo-list ul>li>input, .todo-list__new-task {
+  color: #444;
+  font-family: monospace;
+  min-width: 200px;
+  height: 100%;
+  background: white;
+  text-align: center;
+  padding: 4px;
+  border: 2px solid #8ba868;
+  text-shadow: 1px 1px 1px #8ba868;
+  border-radius: 4px;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.todo-list__active-list::before { content: 'Active tasks' }
+.todo-list__done-list::before { content: 'Completed tasks' }
+.todo-list__active-list::before,
+.todo-list__done-list::before {
+  display: block;
+  margin: -5px auto;
+  text-align: center;
+  color: #cbeba4;
+  text-shadow: 1px 1px 0px #8ba868;
+  font-size: x-large;
 }
 
 
 
+/*  */
 
 .text-editor div,
 .text-editor textarea {

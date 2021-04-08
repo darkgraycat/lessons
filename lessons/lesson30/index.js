@@ -38,8 +38,6 @@ window.onload = () => {
     li.appendChild(remove)
     listActive.appendChild(li)
 
-    li.classList.add('todo-list__task')
-    check.type = 'checkbox'
     text.type = 'text'
     text.readOnly = true
 
@@ -48,6 +46,9 @@ window.onload = () => {
 
     const SAVE_ICON = '💾'
     const EDIT_ICON = '🔨'
+    // const ACTIVE_ICON = '✘'
+    // const ACTIVE_ICON = '⠀'
+    // const DONE_ICON = '✔'
     const ACTIVE_ICON = '☐'
     const DONE_ICON = '☑'
 
@@ -67,6 +68,7 @@ window.onload = () => {
       if (edit.innerHTML == EDIT_ICON) {
         text.readOnly = false
         edit.innerHTML = SAVE_ICON
+        text.focus()
       } else {
         text.readOnly = true
         edit.innerHTML = EDIT_ICON
