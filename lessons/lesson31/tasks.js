@@ -45,6 +45,44 @@ const getSortedTasks = tasks => {
   return [...tasks].sort((a, b) => b.efficiency - a.efficiency)
 }
 
+const getSortedTasks2 = (tasks, d) => {
+  return [...tasks].sort((a, b) => {
+    if (Math.abs(b.efficiency - a.efficiency) <= d) {
+      return b.value - a.value
+    }
+    return b.efficiency - a.efficiency
+  })
+}
+
+const getSortedTasks3 = (tasks, eff_d, val_d, time_d) => {
+  return [...tasks].sort((a, b) => {
+    if (Math.abs(b.efficiency - a.efficiency) <= eff_d) {
+      if (Math.abs(b.value - a.value) <= val_d) {
+        if (Math.abs(a.time - b.time) <= time_d) {
+          return b.efficiency - a.efficiency
+        }
+        return a.time - b.time  // lower is better
+      }
+      return b.value - a.value
+    }
+    return b.efficiency - a.efficiency
+  })
+}
+
+const getSortedTasks3b = (tasks, eff_d, val_d, time_d) => {
+  return [...tasks].sort((a, b) => {
+    const effDelta = b.efficiency - a.efficiency
+    const valDelta = b.value - a.value
+    const timeDelta = a.time - b.time
+    return Math.abs(effDelta) <= eff_d ?
+      Math.abs(valDelta) <= val_d ?
+        Math.abs(timeDelta) <= time_d ?
+          effDelta : timeDelta : valDelta : effDelta
+  })
+}
+
+
+
 const limitByTime = (tasks, time) => {
   const result = []
   tasks.forEach(task => {
@@ -102,7 +140,10 @@ const getMaxEfficiencyByTime2 = (tasks, time) => {
   return limitByTime(getSortedTasks(tasks), time)
 }
 
-
+// Another variant
+const getMaxEfficiencyByTime3 = (tasks, time) => {
+  return limitByTime(getSortedTasks2(tasks, 0.25), time)
+}
 
 
 
@@ -158,8 +199,8 @@ function permut8(arr, prepend) {
 //=======================================================
 //=======================================================
 
-const time = 10
-const tasks = createRandomTasks(8)
+const time = 12
+const tasks = createRandomTasks(4)
 
 // const time = 4
 // const tasks = [
@@ -180,6 +221,8 @@ console.log('total values:', calcValues(tasks));
 
 const tasksAnton = getMaxEfficiencyByTime1(tasks, time)
 const tasksAndrey = getMaxEfficiencyByTime2(tasks, time)
+const tasksAnother = getMaxEfficiencyByTime3(tasks, time)
 
 console.log('by Anton:', calcValues(tasksAnton))
 console.log('by Andrey:', calcValues(tasksAndrey))
+console.log('another:', calcValues(tasksAnother))
